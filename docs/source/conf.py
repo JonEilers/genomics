@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Genomics Tutorials'
+copyright = '2023, Analytical Genomics LLC'
+author = 'Jon Eilers'
 
 release = '0.1'
 version = '0.1.0'
