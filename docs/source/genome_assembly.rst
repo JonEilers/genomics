@@ -6,7 +6,7 @@ Genome Assembly
 .. warning:: This page is currently under construction with new content and mistakes added regularly.
 
 Introduction
-============
+----------
 
 Genome Assembly is `hard <https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2005894>`_. Even now with long read sequencing, `there is still a long way to go <https://www.nature.com/articles/s41592-021-01057-y>`_. [Description of genome assembly challenges...]
 
@@ -15,7 +15,7 @@ Genome Assembly is `hard <https://journals.plos.org/plosbiology/article?id=10.13
 .. note:: `A comprehensive review of scaffolding methods in genome assembly <https://academic.oup.com/bib/article-abstract/22/5/bbab033/6149347?redirectedFrom=fulltext>`_ on ways to improve assemblies scaffolding
 
 Assembly
-========
+--------
 
 Short Read
 ----------
@@ -77,7 +77,7 @@ Assembly Evaluation using K-mers and Long Reads
 .. note:: `Assembly Quality Assessment using Inspector and Merqury <genome_quality/>`_
 
 Polishing and Gap Closing
-=========================
+-------------------------
 
 [Description about the importance and methods of gap closing and polishing...]
 
