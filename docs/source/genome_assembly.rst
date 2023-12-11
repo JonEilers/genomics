@@ -106,8 +106,3 @@ Manual Assembly Correction
 
 .. note:: Note to self: Consider future genome analysis and reassembly for `Australostichopus mollis <https://www.ncbi.nlm.nih.gov/bioproject/PRJEB10682/>`, `Apostichopus leukothele <https://www.ncbi.nlm.nih.gov/sra/SRX8086344[accn]>`, and `Actinopyga echinites <https://www.ncbi.nlm.nih.gov/assembly/GCA_010015985.1#/st>` genomes.
 
-.. autosummary::
-   :toctree: generated
-
-   [list your modules, classes, or functions here]
-

@@ -78,7 +78,3 @@ Visualizing and Editing Gene Models and Annotations
 
 [Information about tools like Apollo, JBrowse2 for visualizing and editing gene models and annotations...]
 
-.. autosummary::
-   :toctree: generated
-
-   [list your modules, classes, or functions here]
