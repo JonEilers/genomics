@@ -1,4 +1,4 @@
-Usage
+Data Cleaning
 =====
 
 .. _installation:
