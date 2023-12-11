@@ -16,8 +16,6 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Contents:
 
    data_cleaning
    genome_assembly
