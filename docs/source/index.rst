@@ -17,5 +17,6 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   Data Cleaning
+   Genome assembly
+   Genome Annotation
