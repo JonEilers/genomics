@@ -16,7 +16,9 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-   Data Cleaning
-   Genome assembly
-   Genome Annotation
+   data_cleaning
+   genome_assembly
+   genome_annotation
