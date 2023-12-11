@@ -1,11 +1,11 @@
 Data Cleaning
 =====
 
-.. _data_cleaning:
+.. _Data_Cleaning:
 
 Each sequencing technology introduces its own unique artifacts and inaccuracies into the sequencing data. Identifying, removing the artifacts, and then analyzing the raw data are the first steps in preparing the sequence data for assembly. If this is the first time dipping your toes into bioinformatics, check out this introduction to getting set up for genome bioinformatics.
 
-`A brief introduction to what you will need if you are serious about getting into bioinformatics <qc/setup>`_
+`A brief introduction to what you will need if you are serious about getting into bioinformatics <qc/setup#Setup>`_
 
 Checking Data Integrity
 ----------
