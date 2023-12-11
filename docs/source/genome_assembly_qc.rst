@@ -66,7 +66,7 @@ It's also important to remove any insertions, deletions, and adapter contaminati
 Manual Assembly Correction
 --------------------------
 
-Recently, researcher who completed the first 100% complete genome assembly uploaded a `pre-print <https://www.biorxiv.org/content/10.1101/2021.07.02.450803v1>`_>`_ to biorxiv detailing their process and advocating for a more manual gap closing process. This is a neat paper and their process will likely feature in many future efforts to create 100% complete telomere to telomere genome assemblies. Although, this process is likely to primarily be used on genome assemblies that are already near completion. Sea cucumber genomes may be waiting awhile before they get this level of treatment. The paper is titled `chasing perfection <https://www.biorxiv.org/content/10.1101/2021.07.02.450803v1>`_. 
+Recently, researcher who completed the first 100% complete genome assembly uploaded a `pre-print <https://www.biorxiv.org/content/10.1101/2021.07.02.450803v1>`_ to biorxiv detailing their process and advocating for a more manual gap closing process. This is a neat paper and their process will likely feature in many future efforts to create 100% complete telomere to telomere genome assemblies. Although, this process is likely to primarily be used on genome assemblies that are already near completion. Sea cucumber genomes may be waiting awhile before they get this level of treatment. The paper is titled `chasing perfection <https://www.biorxiv.org/content/10.1101/2021.07.02.450803v1>`_. 
 
 .. note:: `Significantly improving the quality of genome assemblies through curation <https://academic.oup.com/gigascience/article/10/1/giaa153/6072294>`_
 
