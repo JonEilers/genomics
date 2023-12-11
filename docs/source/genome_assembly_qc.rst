@@ -7,17 +7,11 @@ Once a few assemblies are complete, it's time to determine which one is best and
 
 Additionally, the Earth Bio Genome project has published genome assembly standards to strive towards: More information can be found `here <https://www.earthbiogenome.org/assembly-standards>`_ . I have listed a few of them below. 
 
-```
-< 5% false duplications 
-
-> 90% kmer completeness 
-
-> 90% sequence assigned to candidate chromosomal sequences
-
-> 90% single copy conserved genes e.g. BUSCO>`_ complete and single copy
-
-> 90% transcripts from the same organism mappable
-```
+* < 5% false duplications 
+* > 90% kmer completeness
+* > 90% sequence assigned to candidate chromosomal sequences
+* > 90% single copy conserved genes e.g. BUSCO>`_ complete and single copy
+* > 90% transcripts from the same organism mappable
 
 A paper titled `Towards complete and error-free genome assemblies of all vertebrate species <https://www.nature.com/articles/s41586-021-03451-0>`_ was published in 2021 and offers more information on the difficulties and challenges they faced while sequencing and assembling six vertebrate genomes to the level of quality set by the international Genome 10K G10K consortium. 
 
