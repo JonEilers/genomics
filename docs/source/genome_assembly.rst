@@ -26,7 +26,7 @@ It has been close to two decades since Illumina short read sequencing became acc
 In my case, I am working with organisms that are highly heterozygous. What this means is there is enough variation between the two chromosomes in each chromosome pair to cause problems for a genome assembler that doesn't take this into account. Platanus-Allee was specifically designed to deal with that. The author also created another tool for genomes that have less variation (such as humans) called `Platanus <http://platanus.bio.titech.ac.jp/platanus-assembler>`_. On the Platanus-Allee webpage they state that for low heterozygous species genomes with heterozygousity < 1.0%, Platanus assembler would mark better performance than Platanus-allee. Another genome assembler for heterozygous genomes is `MaSuRCA <https://academic.oup.com/bioinformatics/article/29/21/2669/195975?login=true>`_. Both Platanus-allee and MaSuRCA are hybrid genome assemblers and I go into more detail in the Hybrid genome assembly section. See below for two very brief examples of using these two genome assemblers with just short read data. 
 
 
-.. note:: Short-read assembly using `Platanus-Allee <platanus-allee/>` and `MaSuRCA <masurca/>`_
+.. note:: `Short-read assembly using Platanus-Allee <platanus-allee and MaSuRCA masurca/>`_
 
 Long Read
 ---------
