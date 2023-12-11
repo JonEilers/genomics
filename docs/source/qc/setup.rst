@@ -2,8 +2,6 @@
 Before you Begin
 ================
 
-.. _setup:
-
 Introduction
 ------------
 
