@@ -1,4 +1,4 @@
-Data Cleaning
+Setup
 =====
 
 .. _installation:
