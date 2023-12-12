@@ -31,15 +31,18 @@ Package Management Software
 
 Once you have Ubuntu set up and a few bash commands, install some flavor of `Anaconda <https://www.anaconda.com/>`_. This will make life so easy when installing and managing bioinformatics tools. Anaconda comes with a tool called 'conda' which will allow you to easily install bioinformatic tools. 
 
-For example
-``# creating an environment which will minimize package dependency conflict
-conda create -n sratools
-# activating the environment
-conda activate sratools
-# installing sratoolkit into the environment. Sratoolkit can be used to download data from NCBI
-conda install sratoolkit
-# you can also create an environment and install directly into it
-conda create -n sratools sratoolkit``
+For example::
+    # creating an environment which will minimize package dependency conflict
+    conda create -n sratools
+
+    # activating the environment
+    conda activate sratools
+
+    # installing sratoolkit into the environment. Sratoolkit can be used to download data from NCBI
+    conda install sratoolkit
+    
+    # you can also create an environment and install directly into it
+    conda create -n sratools sratoolkit
 
 There is a GUI for conda, but I suggest you run it from the command line. 
 
