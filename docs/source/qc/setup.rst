@@ -2,9 +2,6 @@
 Setup
 ================
 
-.. _Setup:
-
-
 Bioinformatics and computational biology have a low entry cost. But it comes with a very very steep learning curve. All you need is a computer, preferably one with a lot of CPUs and RAM or access to a server/aws. The cost is going to be a very very steep learning curve. Some might call it `logarithmic <https://en.wikipedia.org/wiki/Logarithm>`_.
 
 Hardware
