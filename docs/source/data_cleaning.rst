@@ -30,7 +30,7 @@ In some cases, there may be problems with the raw sequence data and it needs som
 
 * :doc:`Raw sequence data trimming and filtering <qc/trimming>`
 * :doc:`(To Do) Error correcting long read data <qc/long_read_error_correction>`
-* :doc:`(To Do) Trimming and filtering Hi-C data <qc/hic_data_trim>`
+* :doc:`(To Do) Trimming and filtering Hi-C data <qc/hi-c_trim>`
 
 K-mer Analysis of Reads
 ----------
@@ -45,7 +45,7 @@ However, some genome assemblers, such as MaSURCA do not require a k-mer size as 
 
 Additionally, k-mer analysis can be used to check for various types of contamination in the raw sequence data. The K-mer Analysis Toolkit (KAT) can be used to check for GC bias which might indicate different kinds of contamination such as from PCR. KAT has a number of differents for analyzying the k-mer distribution and what it might indicate. See below for some examples
 
-:doc:`K-mer Analysis using KAT <kat/>`
+:doc:`K-mer Analysis using KAT <qc/kat>`
 
 If everything looks good or has been cleaned up, the next step is `genome assembly <assembly/>`_!
 
