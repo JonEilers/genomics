@@ -12,7 +12,7 @@ Checking Data Integrity
 
 Let's start from the beginning. When you first acquire your data, whether it is via a sketchy flash drive or downloaded from the internet, you will want to check the data integrity. The easiest way is to perform something called a checksum. This essentially checks that the calculated hash value for the copied data is the same as the calculated hash value for the original data, verifying that the copied data has not been corrupted. The popular algorithm to use is md5 and is fairly easy. See the link below for a more in-depth look at how to do this.
 
-:doc:`Using Md5sum to verify data integrity <checksum/>`
+:doc:`Using Md5sum to verify data integrity <qc/checksum>`
 
 Summary Statistics and Data Quality
 ----------
