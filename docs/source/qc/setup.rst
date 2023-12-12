@@ -32,7 +32,7 @@ Package Management Software
 Once you have Ubuntu set up and a few bash commands, install some flavor of `Anaconda <https://www.anaconda.com/>`_. This will make life so easy when installing and managing bioinformatics tools. Anaconda comes with a tool called 'conda' which will allow you to easily install bioinformatic tools. 
 
 For example
-```bash
+``
 # creating an environment which will minimize package dependency conflict
 conda create -n sratools
 
@@ -44,13 +44,13 @@ conda install sratoolkit
 
 # you can also create an environment and install directly into it
 conda create -n sratools sratoolkit
-``` 
+``
 
 There is a GUI for conda, but I suggest you run it from the command line. 
 
 Recently I have been running into issues with conda. A bit of poking around pulled up an alternative called `mamba <https://mamba.readthedocs.io/en/latest/index.html>`_. It is intended to be a replacement for conda which is faster and more robust with some added features. 
 
-```bash
+``
 # installing - be sure to only install into the base conda environment
 conda install mamba -n base -c conda-forge
 
@@ -59,7 +59,7 @@ mamba create -n sratools sratoolkit
 
 # you will still want to use conda for activating and deactivating environments
 conda activate sratools
-```
+``
 
 
 Containerization Tools
@@ -71,7 +71,7 @@ They are both a little more involved than using a package manager, but they can 
 
 One example of a useful container set up can be found in `TeTools <https://github.com/Dfam-consortium/TETools>`_. If you don't want to deal with the headache of installing all the dependencies, this is the solution for you. They even created a nice bash script. 
 
-```bash
+``
 # downloading the bash script
 curl -sSLO https://github.com/Dfam-consortium/TETools/raw/master/dfam-tetools.sh
 
@@ -80,7 +80,7 @@ chmod +x dfam-tetools.sh
 
 # running the script which will download the image and create a container. I suggest you use singularity as your container tool
 ./dfam-tetools.sh --singularity
-```
+``
 And now you have a suite  of repeat identification, annotation, and masking tools at your finger tips. 
 
 Text Editors
