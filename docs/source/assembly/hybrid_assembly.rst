@@ -1,13 +1,5 @@
 --------------
-
-title: “Hybrid assembly using Platanus-allee and MaSuRCA” permalink:
-/hybrid_genome_assembly/ layout: single toc: true toc_sticky: true
-
-sidebar: nav: sidebar-main header: overlay_image:
-/assets/images/home/cuke1.jpg
-
-excerpt: “The Short and Long”
-
+Hybrid Assembly using Platanus-allee and MaSuRCA
 --------------
 
 Introduction

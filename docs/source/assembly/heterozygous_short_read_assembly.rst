@@ -1,5 +1,5 @@
 ================
-MaSuRCA Assembly
+Heterozygous Short Read Genome Assembly
 ================
 
 
