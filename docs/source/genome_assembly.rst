@@ -11,9 +11,6 @@ Genome assembly approaches largely depend on the type and quality of data you ha
 .. note:: `Errors in long-read assemblies can critically affect protein prediction <https://www.nature.com/articles/s41587-018-0004-z>`_ for why it is critical to check assembly quality and fix errors
 .. note:: `A comprehensive review of scaffolding methods in genome assembly <https://academic.oup.com/bib/article-abstract/22/5/bbab033/6149347?redirectedFrom=fulltext>`_ on ways to improve assemblies scaffolding
 
-Assembly
---------
-
 Short Read
 ----------
 
