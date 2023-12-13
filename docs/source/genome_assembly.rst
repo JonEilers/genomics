@@ -39,7 +39,7 @@ Currently, there are long read sequencing technologies that are duking it out: P
 
 Now on to long read sequence genome assembly. Because the reads are longer, but contain more errors, genome assemblers use slightly different approaches to handling the "noisy" reads. But the results are usually better than anything achievable using short read data and most genome assembly pipelines include a few rounds of "polishing" post genome assembly. I go into more detail on this further down this page. See the link below for re-assembly of a sea cucumber genome using three different long read assemblers. 
 
-.. note:: :doc:`Long read assembly of Chiridota heheva using Raven, Flye, and Shasta assemblers <assembly/long_read_assembly/>`
+.. note:: :doc:`Long read assembly of Chiridota heheva using Raven, Flye, and Shasta assemblers <assembly/long_read_assembly>`
 
 Hybrid
 ------
@@ -47,8 +47,8 @@ Hybrid
 Hybrid genome assembly is the predominate approach these days. The majority of recent genome publications use a mix of long read, short read, and hi-c. See below for some examples. 
 
 
-.. note:: :doc:`Hybrid genome assembly of Apostichopus japonicus using Platanus-allee and MaSURCA <assembly/hybrid_assembly/>`
-.. warning:: To-do: `Using Hi-C data to achieve chromosome scale scaffolds using salsa, yahs, 3d-dna and hirise for the Stichopus chloronotus genome <assembly/hi-c_hybrid_assembly>`
+.. note:: :doc:`Hybrid genome assembly of Apostichopus japonicus using Platanus-allee and MaSURCA <assembly/hybrid_assembly>`
+.. warning:: :doc:`Using Hi-C data to achieve chromosome scale scaffolds using salsa, yahs, 3d-dna and hirise for the Stichopus chloronotus genome <assembly/hi-c_hybrid_assembly>`
 
 Phased Genome assembly
 ----------------------
