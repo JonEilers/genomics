@@ -112,11 +112,11 @@ these images.
    :width: 25%
 
 .. image:: /assembly_qc/images/summary_statistics/ajap-masurca.snail.png
-   :align: left
+   :align: center
    :width: 25%
 
 .. image:: /assembly_qc/images/summary_statistics/ajap.snail.png
-   :align: left
+   :align: right
    :width: 25%
 
 {% include gallery caption=“Snails plots of three *Apostichopus
