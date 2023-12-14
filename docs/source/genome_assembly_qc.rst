@@ -21,7 +21,7 @@ Summary Statistics
 A standard metric for genome contiguity is the N50 value. N50 is a tricky beast to understand and I've seen more blogs and descriptions get it wrong than right. Thankfully, `wikipedia <https://en.wikipedia.org/wiki/N50,_L50,_and_related_statistics#N50>`_ gets it right. Without getting into the details on it, the thing that matters when considering the N50 is that the majority of reads in an assembly will be shorter than the N50 value. If you have an N50 of 9kb, than the majority of the assembly will be scaffolds or contigs shorter than 9kb. Having an N50 of 9kb consequently means gene prediction will likely capture the bulk of the genes, but there will be a large number of fragmented genes such as `titin <https://en.wikipedia.org/wiki/Titin>`_. While there are a number of tools for acquiring this metric, probably my favorite way to visualize it is the snail plot produced via `Blobtoolkit <https://www.g3journal.org/content/10/4/1361>`_. `Here <https://blobtoolkit.genomehubs.org/>`_ is a link to their website. See the link below for an example. 
 
 
-:doc:`Summary statistics via Blobtoolkit <summary-stats/>`
+:doc:`Summary statistics via Blobtoolkit <assembly_qc/summary-stats>`
 
 Assembly QC with BUSCOs
 ------------------------
@@ -29,20 +29,20 @@ Assembly QC with BUSCOs
 An easy way to capture the level of fragmentation and also get idea of what to expect when predicting genes is to check the `BUSCOs <https://pubmed.ncbi.nlm.nih.gov/26059717/>`_. You'll hear BUSCOs thrown around a lot in genome papers and among scientists involved in genome sequencing. It's treated like a holy metric for how good your assembly is and it is a reasonable way to check. In essence, someone took the time to find a number of genes that are highly conserved across the kingdoms and phylum of life. Because of their conserved nature, it is a reasonable assumption that the genome of your organism likely contains these genes. So if the majority of these genes can be found in your assembly and they are not fragmented or unexpectedly duplicated, then it is reasonable to assume that a similar percentage of genes in the genome will likewise be in good shape. It is important to understand though, that BUSCO results do not represent a best case scenario but rather a targeted random sample of the genome assembly. See below for an example
 
 
-.. note:: `Assembly quality assessment using BUSCO analysis <busco/>`_
+.. note:: :doc:`Assembly quality assessment using BUSCO analysis <assembly_qc/busco>`
 
 Assembly Contamination and Quality
 ----------------------------------
 In addition to looking at summary statistics and checking BUSCOs, it is also wise to check for contamination. During the sequencing process, DNA from other organisms may be in the sample and it's important to know if that has found its way into the genome assembly. A common method for checking this is to download a uniprot or refseq protein database and blast it against your assembly then check to see what organisms had the highest hit. If those organisms are closely related to the organism of interest, then it is safe to say that's probably solid, but if there are a lot of hits for distantly related organisms, then it might be a good idea to consider preprocessing and filtering the raw data before assembling. `Blobtoolkit <https://www.g3journal.org/content/10/4/1361>`_ produces two different types of graphs, the blobplot and the Cumulative assembly span plot, for visualizing possible contamination. Additionally, `KAT <https://academic.oup.com/bioinformatics/article/33/4/574/2664339?login=true>`_ can be used to check for k-mer contamination in an assembly. 
 
-.. note:: `Assembly contamination and quality via Blobtoolkit <contamination/>`_
+.. note:: :doc:`Assembly contamination and quality via Blobtoolkit <assembly_qc/contamination>`
 
 Assembly Evaluation using K-mers and Long Reads
 -----------------------------------------------
 
 It is important to get a quantifiable picture of the assembly quality. One way to check assembly quality is using K-mers to see how many unique K-mers are found in both the assembly and the raw data then visualize it using a `K-mer spectra graph <https://academic.oup.com/view-large/figure/118668344/btw663f1.tif>`_. A great tool for this is `Merqury <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02134-9>`_. Another tool for assembly evaluation is called `Inspector <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02527-4>`_ which uses long reads to identify, quantify, and correct errors. 
 
-.. note:: `Assembly Quality Assessment using Inspector and Merqury <genome_quality/>`_
+.. note:: :doc:`Assembly Quality Assessment using Inspector and Merqury <assembly_qc/genome_quality>`
 
 Polishing and Gap Closing
 -------------------------
@@ -61,7 +61,7 @@ Polishing
 
 It's also important to remove any insertions, deletions, and adapter contamination that may have crept into the genome assembly. This can be accomplished using either long read or short read data. Short read data has a much higher accuracy, but long read data, while full of errors, can produce a consensus sequence that is highly accurate which can allow it to correct longer mistakes than short read data. 
 
-.. note:: `Genome assembly polishing using hapo-g <genome_polishing/>`_
+.. note:: :doc:`Genome assembly polishing using hapo-g <assembly_qc/genome_polishing>`
 
 Manual Assembly Correction
 --------------------------
