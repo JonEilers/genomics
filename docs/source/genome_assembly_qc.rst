@@ -29,7 +29,7 @@ Assembly QC with BUSCOs
 An easy way to capture the level of fragmentation and also get idea of what to expect when predicting genes is to check the `BUSCOs <https://pubmed.ncbi.nlm.nih.gov/26059717/>`_. You'll hear BUSCOs thrown around a lot in genome papers and among scientists involved in genome sequencing. It's treated like a holy metric for how good your assembly is and it is a reasonable way to check. In essence, someone took the time to find a number of genes that are highly conserved across the kingdoms and phylum of life. Because of their conserved nature, it is a reasonable assumption that the genome of your organism likely contains these genes. So if the majority of these genes can be found in your assembly and they are not fragmented or unexpectedly duplicated, then it is reasonable to assume that a similar percentage of genes in the genome will likewise be in good shape. It is important to understand though, that BUSCO results do not represent a best case scenario but rather a targeted random sample of the genome assembly. See below for an example
 
 
-.. note:: :doc:`Assembly quality assessment using BUSCO analysis <assembly_qc/busco>`
+.. note:: :doc:`Assembly quality assessment using BUSCO analysis <assembly_qc/assembly_busco>`
 
 Assembly Contamination and Quality
 ----------------------------------
@@ -61,7 +61,7 @@ Polishing
 
 It's also important to remove any insertions, deletions, and adapter contamination that may have crept into the genome assembly. This can be accomplished using either long read or short read data. Short read data has a much higher accuracy, but long read data, while full of errors, can produce a consensus sequence that is highly accurate which can allow it to correct longer mistakes than short read data. 
 
-.. note:: :doc:`Genome assembly polishing using hapo-g <assembly_qc/genome_polishing>`
+.. note:: :doc:`Genome assembly polishing using hapo-g <assembly_qc/polishing>`
 
 Manual Assembly Correction
 --------------------------
