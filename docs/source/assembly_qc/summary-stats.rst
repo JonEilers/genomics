@@ -107,7 +107,17 @@ Unfortunately, blobtools isn’t set up to view multiple snail plots side
 by side. If they did, I would likely host the interactive version of
 these images.
 
-.. image:: /assembly_qc/images/blobtoolkit/japonicus.snail.png
+.. image:: assembly_qc/images/summary_statistics/ajap-masurca-scaffolds.ref.fa.snail.png
+   :align: left
+   :width: 30%
+
+.. image:: assembly_qc/images/summary_statistics/ajap-masurca.snail.png
+   :align: left
+   :width: 30%
+
+.. image:: assembly_qc/images/summary_statistics/ajap.snail.png
+   :align: left
+   :width: 30%
 
 {% include gallery caption=“Snails plots of three *Apostichopus
 japonicus* genome assemblies. The Far left snail plot is the Published
