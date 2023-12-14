@@ -109,15 +109,15 @@ these images.
 
 .. image:: /assembly_qc/images/summary_statistics/ajap-masurca-scaffolds.ref.fa.snail.png
    :align: left
-   :width: 30%
+   :width: 25%
 
 .. image:: /assembly_qc/images/summary_statistics/ajap-masurca.snail.png
    :align: left
-   :width: 30%
+   :width: 25%
 
 .. image:: /assembly_qc/images/summary_statistics/ajap.snail.png
    :align: left
-   :width: 30%
+   :width: 25%
 
 {% include gallery caption=“Snails plots of three *Apostichopus
 japonicus* genome assemblies. The Far left snail plot is the Published
