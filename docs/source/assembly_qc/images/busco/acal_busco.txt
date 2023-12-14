@@ -1,0 +1,103 @@
+**Platanus-Allee**
+Eukaryote
+```
+# BUSCO version is: 4.0.2 
+# The lineage dataset is: eukaryota_odb10 (Creation date: 2019-11-20, number of species: 70, number of BUSCOs: 255)
+# Summarized benchmarking in BUSCO notation for file /home/jon/Working_Files/out_consensusScaffold.fa
+# BUSCO was run in mode: genome
+
+	***** Results: *****
+
+	C:78.4%[S:75.7%,D:2.7%],F:16.1%,M:5.5%,n:255	   
+	200	Complete BUSCOs (C)			   
+	193	Complete and single-copy BUSCOs (S)	   
+	7	Complete and duplicated BUSCOs (D)	   
+	41	Fragmented BUSCOs (F)			   
+	14	Missing BUSCOs (M)			   
+	255	Total BUSCO groups searched
+```
+
+Metazoa
+```
+# The lineage dataset is: metazoa_odb10 (Creation date: 2019-11-20, number of species: 65, number of BUSCOs: 954)
+# Summarized benchmarking in BUSCO notation for file /home/jon/Working_Files/out_consensusScaffold.fa
+# BUSCO was run in mode: genome
+
+	***** Results: *****
+
+	C:82.5%[S:78.6%,D:3.9%],F:12.3%,M:5.2%,n:954	   
+	787	Complete BUSCOs (C)			   
+	750	Complete and single-copy BUSCOs (S)	   
+	37	Complete and duplicated BUSCOs (D)	   
+	117	Fragmented BUSCOs (F)			   
+	50	Missing BUSCOs (M)			   
+	954	Total BUSCO groups searched
+```
+
+**Masurca**
+Eukaryote
+```
+# BUSCO version is: 4.0.2 
+# The lineage dataset is: eukaryota_odb10 (Creation date: 2019-11-20, number of species: 70, number of BUSCOs: 255)
+# Summarized benchmarking in BUSCO notation for file /home/jon/Working_Files/masurca_p_cali.fasta
+# BUSCO was run in mode: genome
+
+	***** Results: *****
+
+	C:69.8%[S:54.1%,D:15.7%],F:20.0%,M:10.2%,n:255	   
+	178	Complete BUSCOs (C)			   
+	138	Complete and single-copy BUSCOs (S)	   
+	40	Complete and duplicated BUSCOs (D)	   
+	51	Fragmented BUSCOs (F)			   
+	26	Missing BUSCOs (M)			   
+	255	Total BUSCO groups searched
+```
+
+Metazoa 
+```
+# The lineage dataset is: metazoa_odb10 (Creation date: 2019-11-20, number of species: 65, number of BUSCOs: 954)
+# Summarized benchmarking in BUSCO notation for file /home/jon/Working_Files/masurca_p_cali.fasta
+# BUSCO was run in mode: genome
+
+	***** Results: *****
+
+	C:76.4%[S:61.6%,D:14.8%],F:13.6%,M:10.0%,n:954	   
+	729	Complete BUSCOs (C)			   
+	588	Complete and single-copy BUSCOs (S)	   
+	141	Complete and duplicated BUSCOs (D)	   
+	130	Fragmented BUSCOs (F)			   
+	95	Missing BUSCOs (M)			   
+	954	Total BUSCO groups searched
+```
+
+**Redundans**
+
+Eukaryote
+```
+	--------------------------------------------------
+	|Results from dataset eukaryota_odb10             |
+	--------------------------------------------------
+	|C:78.4%[S:73.3%,D:5.1%],F:12.5%,M:9.1%,n:255     |
+	|200	Complete BUSCOs (C)                       |
+	|187	Complete and single-copy BUSCOs (S)       |
+	|13	Complete and duplicated BUSCOs (D)        |
+	|32	Fragmented BUSCOs (F)                     |
+	|23	Missing BUSCOs (M)                        |
+	|255	Total BUSCO groups searched               |
+	--------------------------------------------------
+```
+
+Metazoa
+```
+	--------------------------------------------------
+	|Results from dataset metazoa_odb10               |
+	--------------------------------------------------
+	|C:84.2%[S:75.6%,D:8.6%],F:9.2%,M:6.6%,n:954      |
+	|803	Complete BUSCOs (C)                       |
+	|721	Complete and single-copy BUSCOs (S)       |
+	|82	Complete and duplicated BUSCOs (D)        |
+	|88	Fragmented BUSCOs (F)                     |
+	|63	Missing BUSCOs (M)                        |
+	|954	Total BUSCO groups searched               |
+	--------------------------------------------------
+```
