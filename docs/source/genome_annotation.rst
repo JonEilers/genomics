@@ -49,8 +49,8 @@ For genome projects, the goal is identifying and "masking" repetitive elements i
 Below is a link to a page in which I have used two different pipelines to identify and annotate the repetitive elements in a sea cucumber genome. 
 
 
-.. warning:: :docs:`In Progress - Repetitive Element Identification and Masking <annotation/repeats>`
-.. warning:: :docs:`In Progress - Manual Curation and Annotation of Transposable Elements <annotation/manual_te_annotation>`
+.. warning:: :doc:`In Progress - Repetitive Element Identification and Masking <annotation/repeats>`
+.. warning:: :doc:`In Progress - Manual Curation and Annotation of Transposable Elements <annotation/manual_te_annotation>`
 
 
 Gene Model Prediction
@@ -60,7 +60,7 @@ The crux of any genome project is predicting gene models. A `gene model <https:/
 
 These tools use two different types of data often termed intrinsic and extrinsic. Intrinsic data is going to be data gleaned directly from the organism such as gene expression data or protein sequence data. Extrinsic data can be found in protein databases such as uniprot or orthoDB which have sequences of known structure and function which can be used to "infer" the sequence and structure in your organism of choice. See below for examples of using both datatypes and pipelines 
 
-.. warning:: :docs:`To do - Gene Prediction <annotation/gene-prediction>`
+.. warning:: :doc:`To do - Gene Prediction <annotation/gene-prediction>`
 
 Additionally, some databases such as Echinobase are trying to systematize their workflow, insure quality, and increase reproducibility by requiring all echinoderm genome projects to go through NCBI's `gene prediction pipeline <https://www.ncbi.nlm.nih.gov/genome/annotation_euk/process/>`_ before allowing the genome, gene models, and annotations to be hosted on echinobase. 
 
@@ -79,7 +79,7 @@ tfam, dfam, rfam
 `Long Noncoding RNAs and Repetitive Elements: Junk or Intimate Evolutionary Partners? <https://www.sciencedirect.com/science/article/pii/S0168952519301933>`_
 
 
-.. warning:: :docs:`To do - Non-coding RNA Identification and Annotation <annotation/rfam_infernal>`
+.. warning:: :doc:`To do - Non-coding RNA Identification and Annotation <annotation/rfam_infernal>`
 
 Organelle Genome
 ----------------
