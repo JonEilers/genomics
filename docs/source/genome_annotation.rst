@@ -26,7 +26,13 @@ Not all genes are being expressed at the same time and in the same tissue. Thus,
 
 Not only will the mapped reads be used in gene model creation, but the mapping rates and indel rates will tell me something about the quality of the genome assembly. 
 
-.. warning:: `In Progress - rna-seq mapping <star/>`_
+.. warning:: :doc:`In Progress - rna-seq mapping <annotation/rna-seq_mapping>`
+
+
+Protein Database Alignment
+--------------------------
+
+.. warning:: :doc:`In Progress - Aligning Proteins from a database to the assembly <annotation/protein_database_alignment>`
 
 Repetitive Element Identification and Masking
 ----------
@@ -43,8 +49,8 @@ For genome projects, the goal is identifying and "masking" repetitive elements i
 Below is a link to a page in which I have used two different pipelines to identify and annotate the repetitive elements in a sea cucumber genome. 
 
 
-.. warning:: `In Progress - Repetitive Element Identification and Masking <repeats/>`_
-.. warning:: `In Progress - Manual Curation and Annotation of Transposable Elements <manual_repeat_annotation/>`_
+.. warning:: :docs:`In Progress - Repetitive Element Identification and Masking <annotation/repeats>`
+.. warning:: :docs:`In Progress - Manual Curation and Annotation of Transposable Elements <annotation/manual_te_annotation>`
 
 
 Gene Model Prediction
@@ -54,7 +60,7 @@ The crux of any genome project is predicting gene models. A `gene model <https:/
 
 These tools use two different types of data often termed intrinsic and extrinsic. Intrinsic data is going to be data gleaned directly from the organism such as gene expression data or protein sequence data. Extrinsic data can be found in protein databases such as uniprot or orthoDB which have sequences of known structure and function which can be used to "infer" the sequence and structure in your organism of choice. See below for examples of using both datatypes and pipelines 
 
-.. warning:: `To do - Gene Prediction <gene-prediction/>`_
+.. warning:: :docs:`To do - Gene Prediction <annotation/gene-prediction>`
 
 Additionally, some databases such as Echinobase are trying to systematize their workflow, insure quality, and increase reproducibility by requiring all echinoderm genome projects to go through NCBI's `gene prediction pipeline <https://www.ncbi.nlm.nih.gov/genome/annotation_euk/process/>`_ before allowing the genome, gene models, and annotations to be hosted on echinobase. 
 
@@ -66,14 +72,14 @@ While most scientists are focused on the glamor of genes. The genome contains nu
 Non-Coding RNA
 --------------
 
-tfam, dfam
+tfam, dfam, rfam
 
 `Integrative rDNAomics—Importance of the Oldest Repetitive Fraction of the Eukaryote Genome <https://www.mdpi.com/2073-4425/10/5/345>`_
 
 `Long Noncoding RNAs and Repetitive Elements: Junk or Intimate Evolutionary Partners? <https://www.sciencedirect.com/science/article/pii/S0168952519301933>`_
 
 
-.. warning:: `To do - Non-coding RNA Identification and Annotation <rna/>`_
+.. warning:: :docs:`To do - Non-coding RNA Identification and Annotation <annotation/rfam_infernal>`
 
 Organelle Genome
 ----------------
