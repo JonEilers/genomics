@@ -49,7 +49,7 @@ For genome projects, the goal is identifying and "masking" repetitive elements i
 Below is a link to a page in which I have used two different pipelines to identify and annotate the repetitive elements in a sea cucumber genome. 
 
 
-.. warning:: :doc:`In Progress - Repetitive Element Identification and Masking <annotation/repeats>`
+.. warning:: :doc:`In Progress - Repetitive Element Identification and Masking <annotation/repetitive_elements>`
 .. warning:: :doc:`In Progress - Manual Curation and Annotation of Transposable Elements <annotation/manual_te_annotation>`
 
 
