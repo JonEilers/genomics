@@ -34,7 +34,7 @@ Let's say the data looks great, adapters have been removed, low quality reads fi
 
 .. figure:: /front_page_assets/annotation.png
    :align: center
-   :figwidth: 40%
+   :figwidth: 100%
 
 The assembly is chromsome scale, maybe telomere to telomere, gapless, polished, and biological contamination removed. That's a nice looking genome assembly. To find the interesting bits inside that string of letters requires a bit of work though. First is mapping gene expression data to the assembly. This tells you where genes are and possibly what the structure is. However, unless you have gene expression data from every tissue type and developmental stage, there is a good chance some genes will not have expression data to guide gene model prediction. Aligning protein sequences from NCBI's refseq and Uniprot, possibly using proteins from closely related species, is a considered standard practice. To get the rest of way though you need a tool which can predict gene models using what's called "intrinsic" information. These are the start codons, splice sites, and stop codons which tell the algorithm where coding sequence starts and ends. 
 
@@ -44,7 +44,7 @@ Once that's done and gene models predicted, it is time to get some summary stati
 
 .. figure:: /front_page_assets/other_annotations.png
    :align: right
-   :width: 50%
+   :figwidth: 40%
  
 But wait, that's not all. There is a slew of additional non-coding sequence content in the genome that should be identified and annotated. A notable one being the repetetitive elements that were masked earlier. These play a huge role in genome evolution including messing with cis-regulatory elements that can result in chances in phenotype. Good examples including the origins of mammary glands and placentas in placental mammals. Additionally Organelle genomes should be checked for completeness and gene content as those are rather important to life and shouldn't be overlooked during the larger genome assembly process. There are many other interesting parts of the genome to include, some of which are listed to the left. Some genome sequencing projects put in the effort to identify and annotate these features, but this is time consuming and most projects do not. 
 
