@@ -10,7 +10,7 @@ My goal is to distill the basics into one website that is understandable and acc
    :width: 80%
    :figwidth: 40%
 
-On the surface, genome sequencing projects are fairly straightforwad. It begins with checking the quality of your raw sequene data, assembling the raw reads into contiguous sequences, and then predicting where genes are and what those genes do. However, nothing is ever that simple.
+On the surface, genome sequencing projects are fairly straightforwad. It begins with checking the quality of your raw sequene data, assembling the raw reads into contiguous sequences, and then predicting where genes are and what those genes do. However, nothing is ever that simple. Genome sequencing requires several different data types, each step has numerous sub-steps and quality control steps, and the final product will need to be manually inspected to ensure that the assembly, gene models, and annotations are correct. 
 
 .. figure:: /front_page_assets/data_types.png
    :align: center
