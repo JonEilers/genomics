@@ -18,7 +18,7 @@ Before diving in though, allow me to share an outline of what
 
 .. figure:: /front_page_assets/short_version.png
    :align: left
-   :width: 100%
+   :width: 30%
 
    The abbreviated version of what a genome sequencing project pipeline looks like.
 
