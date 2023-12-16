@@ -24,7 +24,7 @@ Before diving in though, allow me to share an outline of what
 
 .. figure:: /front_page_assets/data_cleaning.png
    :align: right
-   :width: 30%
+   :width: 50%
 
 .. figure:: /front_page_assets/assembly.png
    :align: center
