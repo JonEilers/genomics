@@ -50,6 +50,8 @@ Genome Assembly and Quality control
 
 Let's say the data looks great, adapters have been removed, low quality reads filtered from the datasets, etc. It's time to do some assembly. There are numerous assembly tools and pipelines. It is considered good practice to try a few variations of each as every dataset has unique charactistics that may work better with one tool compared to others. Generally, this happens at every step of the assembly process. IE, try three different contig assemblers, check the quality of the resulting assemblies, pick one, polish the assembly using short reads, and move onto scaffolding. Same applies to the Hi-C scaffolding step. After Hi-C scaffolding, there are often structural errors that can then be corrected using optical genome mapping. However, recent years have seen successful chromosome scale assembly without OGM so there has been a move away from using it unless the genome is large and particularly complex. 
 
+There are a number of quality control metrics and analyses that can be done to ensure the assembly is approaching high-quality. One is using summary statistics such as N50, number of contigs and scaffolds, genome size, heterozygousity, and QV. Additionally, there are tools that check for biological contamination and use K-mer analysis look for signals of adapter and error contamination in the assembly relative to the raw data. Finally, polishing a genome using highly accurate reads is almost a must if the assembly is going to have a high QV score and minimal errors. 
+
 .. toctree::
 
    genome_assembly
@@ -58,6 +60,8 @@ Let's say the data looks great, adapters have been removed, low quality reads fi
 Genome Gene Prediction and Annotation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+The assembly is chromsome scale, maybe telomere to telomere, gapless, polished, and biological contamination removed. That's a nice looking genome assembly. To find the interesting bits inside that string of letters requires a bit of work though. First is mapping gene expression data to the assembly. This tells you where genes are and possibly what the structure is. However, unless you have gene expression data from every tissue type and developmental stage, there is a good chance some genes will not have expression data to guide gene model prediction. Aligning protein sequences from NCBI's refseq and Uniprot, possibly using proteins from closely related species, is a considered standard practice. To get the rest of way though you need a tool which can predict gene models using what's called "intrinsic" information. These are the start codons, splice sites, and stop codons which tell the algorithm where coding sequence starts and ends. 
+
 .. figure:: /front_page_assets/annotation.png
    :align: center
    :figwidth: 100%
@@ -65,8 +69,6 @@ Genome Gene Prediction and Annotation
 .. raw:: html
 
    <div style="margin-bottom:20px;"></div>
-
-The assembly is chromsome scale, maybe telomere to telomere, gapless, polished, and biological contamination removed. That's a nice looking genome assembly. To find the interesting bits inside that string of letters requires a bit of work though. First is mapping gene expression data to the assembly. This tells you where genes are and possibly what the structure is. However, unless you have gene expression data from every tissue type and developmental stage, there is a good chance some genes will not have expression data to guide gene model prediction. Aligning protein sequences from NCBI's refseq and Uniprot, possibly using proteins from closely related species, is a considered standard practice. To get the rest of way though you need a tool which can predict gene models using what's called "intrinsic" information. These are the start codons, splice sites, and stop codons which tell the algorithm where coding sequence starts and ends. 
 
 Before predicting gene models though, it is important to do something called "masking" where repetetitive elements such as transposons and low complexity regions are identified in the genome assembly and annotated so the gene prediction tool ignores those areas. This significantly reduces the computational time and effort it takes to predict gene models in the assembly. 
 
