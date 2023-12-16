@@ -29,15 +29,23 @@ An additional aspect of doing data quality control prior to assembly is somethin
    :align: center
    :width: 100%
 
-Let's say the data looks great, adapters have been removed, low quality reads filtered from the datasets, etc. It's time to do some assembly. There are numerous assembly tools and pipelines. It is considered good practice to try a few variations of each as every dataset has unique charactistics that may work better with one tool compared to others. Generally, this happens at every step of the assembly process. IE, try three different contig assemblers, check the quality of the resulting assemblies, pick one, polish the assembly using short reads, and move onto scaffolding. Same applies to the Hi-C scaffolding step. After Hi-C scaffolding, there are often minor structural errors that can then be corrected using optical genome mapping. However, recent years have seen successful chromosome scale assembly without OGM so there has been a move away from using it unless the genome is large and particularly complex. 
+Let's say the data looks great, adapters have been removed, low quality reads filtered from the datasets, etc. It's time to do some assembly. There are numerous assembly tools and pipelines. It is considered good practice to try a few variations of each as every dataset has unique charactistics that may work better with one tool compared to others. Generally, this happens at every step of the assembly process. IE, try three different contig assemblers, check the quality of the resulting assemblies, pick one, polish the assembly using short reads, and move onto scaffolding. Same applies to the Hi-C scaffolding step. After Hi-C scaffolding, there are often structural errors that can then be corrected using optical genome mapping. However, recent years have seen successful chromosome scale assembly without OGM so there has been a move away from using it unless the genome is large and particularly complex. 
 
 .. figure:: /front_page_assets/annotation.png
    :align: center
    :width: 100%
 
+The assembly is chromsome scale, maybe telomere to telomere, gapless, polished, and biological contamination removed. That's a nice looking genome assembly. To find the interesting bits inside that string of letters requires a bit of work though. First is mapping gene expression data to the assembly. This tells you where genes are and possibly what the structure is. However, unless you have gene expression data from every tissue type and developmental stage, there is a good chance some genes will not have expression data to guide gene model prediction. Aligning protein sequences from NCBI's refseq and Uniprot, possibly using proteins from closely related species, is a considered standard practice. To get the rest of way though you need a tool which can predict gene models using what's called "intrinsic" information. These are the start codons, splice sites, and stop codons which tell the algorithm where coding sequence starts and ends. 
+
+Before predicting gene models though, it is important to do something called "masking" where repetetitive elements such as transposons and low complexity regions are identified in the genome assembly and annotated so the gene prediction tool ignores those areas. This significantly reduces the computational time and effort it takes to predict gene models in the assembly. 
+
+Once that's done and gene models predicted, it is time to get some summary statistics on how many genes, intron to exon ratio, average length, etc. If all looks good, functional annotation is accomplished using those a handful of tools and databases that have functions assigned to genes. This is not the most accurate step, but having some functional annotation is better than none. With the functional annotation, identifying genes you are interested in can be simple. Which leads to the final and arguably most important step - checking the quality of the assembly and gene models. Doing this has revealed numerous assembly and gene model prediction errors during my own research. If more genome sequencing projects did this there would likely be higher quality assemblies and gene models available. 
+
 .. figure:: /front_page_assets/other_annotations.png
    :align: right
    :width: 50%
+ 
+
  
 Here I have detailed the tools I’ve used and the process I go through to create genome assemblies, predict genes, and analyze results. When reading these walk-throughs, keep in mind that it’s a rare day when everything works the first time. More time is spent troubleshooting installation problems and learning how to use a tool than is spent actually using the tool. So if you find yourself struggling to get things working, rest assured, that’s a battle we all fight everyday.
 
