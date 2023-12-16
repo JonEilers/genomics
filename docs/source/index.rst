@@ -15,6 +15,13 @@ Before diving in though, allow me to share an outline of what
 
    Types of data you will need for a chromosome scale genome assembly.
 
+
+.. figure:: /front_page_assets/short_version.png
+   :align: left
+   :width: 100%
+
+   The abbreviated version of what a genome sequencing project pipeline looks like.
+
 .. warning:: This page is currently under construction with new content and mistakes added regularly.
 
 Contents
