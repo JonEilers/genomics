@@ -22,6 +22,10 @@ Before diving in though, allow me to share an outline of what
 
    The abbreviated version of what a genome sequencing project pipeline looks like.
 
+.. figure:: /front_page_assets/data_cleaning.png
+   :align: center
+   :width: 100%
+
 .. warning:: This page is currently under construction with new content and mistakes added regularly.
 
 Contents
