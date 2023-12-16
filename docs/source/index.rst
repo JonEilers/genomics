@@ -7,7 +7,6 @@ My goal is to distill the basics into one website that is understandable and acc
 
 .. figure:: /front_page_assets/short_version.png
    :align: left
-   :width: 50%
    :figwidth: 40%
 
 On the surface, genome sequencing projects are fairly straightforwad. It begins with checking the quality of your raw sequene data, assembling the raw reads into contiguous sequences, and then predicting where genes are and what those genes do. However, nothing is ever that simple.
@@ -20,7 +19,6 @@ In order to achieve the highest quality and most contigious genome assembly (pre
 
 .. figure:: /front_page_assets/data_cleaning.png
    :align: right
-   :width: 60%
    :figwidth: 40%
 
 Now to get a little into the weeds. The first step checking the quality of the raw sequence data. As mentioned previously there are a number of different data types, all of which have specific types of errors that can creep into the data and wreck havoc on later steps in the pipeline. A common one is not removing adaptor contamination. Not dealing with this can result in fragmented genes models and incorrectly assembled sequences. Low quality reads can also impact assembly by introducing incorrect bases and the assembly tool being unable to resolve alignment conflicts in sequences resulting in a fragmented assembly. 
