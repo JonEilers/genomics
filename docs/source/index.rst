@@ -24,7 +24,7 @@ Before diving in though, allow me to share an outline of what
 
 .. figure:: /front_page_assets/data_cleaning.png
    :align: center
-   :width: 100%
+   :width: 50%
 
 .. warning:: This page is currently under construction with new content and mistakes added regularly.
 
