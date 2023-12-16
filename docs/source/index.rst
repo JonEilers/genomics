@@ -7,6 +7,7 @@ My goal is to distill the basics into one website that is understandable and acc
 
 .. figure:: /front_page_assets/short_version.png
    :align: left
+   :width: 80%
    :figwidth: 40%
 
 On the surface, genome sequencing projects are fairly straightforwad. It begins with checking the quality of your raw sequene data, assembling the raw reads into contiguous sequences, and then predicting where genes are and what those genes do. However, nothing is ever that simple.
@@ -19,7 +20,7 @@ In order to achieve the highest quality and most contigious genome assembly (pre
 
 .. figure:: /front_page_assets/data_cleaning.png
    :align: right
-   :figwidth: 40%
+   :figwidth: 50%
 
 Now to get a little into the weeds. The first step checking the quality of the raw sequence data. As mentioned previously there are a number of different data types, all of which have specific types of errors that can creep into the data and wreck havoc on later steps in the pipeline. A common one is not removing adaptor contamination. Not dealing with this can result in fragmented genes models and incorrectly assembled sequences. Low quality reads can also impact assembly by introducing incorrect bases and the assembly tool being unable to resolve alignment conflicts in sequences resulting in a fragmented assembly. 
 
@@ -33,7 +34,7 @@ Let's say the data looks great, adapters have been removed, low quality reads fi
 
 .. figure:: /front_page_assets/annotation.png
    :align: center
-   :width: 100%
+   :figwidth: 40%
 
 The assembly is chromsome scale, maybe telomere to telomere, gapless, polished, and biological contamination removed. That's a nice looking genome assembly. To find the interesting bits inside that string of letters requires a bit of work though. First is mapping gene expression data to the assembly. This tells you where genes are and possibly what the structure is. However, unless you have gene expression data from every tissue type and developmental stage, there is a good chance some genes will not have expression data to guide gene model prediction. Aligning protein sequences from NCBI's refseq and Uniprot, possibly using proteins from closely related species, is a considered standard practice. To get the rest of way though you need a tool which can predict gene models using what's called "intrinsic" information. These are the start codons, splice sites, and stop codons which tell the algorithm where coding sequence starts and ends. 
 
