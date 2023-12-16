@@ -37,7 +37,7 @@ Let's say the data looks great, adapters have been removed, low quality reads fi
 .. figure:: /front_page_assets/annotation.png
    :align: center
    :figwidth: 100%
-
+   :alt: alternative text
 
 The assembly is chromsome scale, maybe telomere to telomere, gapless, polished, and biological contamination removed. That's a nice looking genome assembly. To find the interesting bits inside that string of letters requires a bit of work though. First is mapping gene expression data to the assembly. This tells you where genes are and possibly what the structure is. However, unless you have gene expression data from every tissue type and developmental stage, there is a good chance some genes will not have expression data to guide gene model prediction. Aligning protein sequences from NCBI's refseq and Uniprot, possibly using proteins from closely related species, is a considered standard practice. To get the rest of way though you need a tool which can predict gene models using what's called "intrinsic" information. These are the start codons, splice sites, and stop codons which tell the algorithm where coding sequence starts and ends. 
 
