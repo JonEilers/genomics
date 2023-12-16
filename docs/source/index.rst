@@ -16,7 +16,10 @@ On the surface, genome sequencing projects are fairly straightforwad. It begins 
    :align: center
    :width: 100%
 
+.. raw:: html
 
+   <div style="margin-bottom:20px;"></div>
+   
 In order to achieve the highest quality and most contigious genome assembly (preferably chromsome length scaffolds or telomere to telomere) several different data types are required. The first and most important are long reads, these are sequences that are 10,000 bases to 100,000 bases long. Without these your assembly will be very fragmented. The second most important data type is what's called Hi-C. This is a technique to capture the chromatin conformation within a nucleus. It also happens to allow for chromsome scale scaffolding because sequences that are close to eachother in the nucleus also tend to be from the same chromosome. Current long read sequencing isn't quite accurate enough, so there will likely be assembly errors. Short reads can correct the majority of these. For larger assembly errors, optical genome mapping does the trick. Neither of these are necessary for a genome sequencing project, but they greatly improve the quality of the assembly. Finally, assemblies are great, but the reality is they are just a wall of ATGC text and most people are interested in what that wall of text contains - genes. Unless the genome has previously been assembled and there are quality gene models, it will be necessary to predict where genes are and the gene structure is. That is where rna-seq data comes in handy and is arguably the best type of data for that. 
 
 .. figure:: /front_page_assets/data_cleaning.png
