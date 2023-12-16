@@ -21,6 +21,10 @@ In order to achieve the highest quality and most contigious genome assembly (pre
    :align: right
    :width: 60%
 
+Now to get a little into the weeds. The first step checking the quality of the raw sequence data. As mentioned previously there are a number of different data types, all of which have specific types of errors that can creep into the data and wreck havoc on later steps in the pipeline. A common one is not removing adaptor contamination. Not dealing with this can result in fragmented genes models and incorrectly assembled sequences. Low quality reads can also impact assembly by introducing incorrect bases and the assembly tool being unable to resolve alignment conflicts in sequences resulting in a fragmented assembly. 
+
+An additional aspect of doing data quality control prior to assembly is something called K-mer analysis. Exactly what this is will be delved into later. However, doing this kind of analysis can reveal a number of characteristics about the data and the organism. This includes genome size, heterozygousity, ideal k-mer size for genome assembly, potential biological contamination, and raw data quality. These data can inform what you should expect to see in your assembly. 
+
 .. figure:: /front_page_assets/assembly.png
    :align: center
    :width: 100%
