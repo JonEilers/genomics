@@ -8,6 +8,7 @@ My goal is to distill the basics into one website that is understandable and acc
 .. figure:: /front_page_assets/short_version.png
    :align: left
    :width: 30%
+   :figwidth: 40%
 
 On the surface, genome sequencing projects are fairly straightforwad. It begins with checking the quality of your raw sequene data, assembling the raw reads into contiguous sequences, and then predicting where genes are and what those genes do. However, nothing is ever that simple.
 
@@ -43,7 +44,7 @@ Once that's done and gene models predicted, it is time to get some summary stati
 
 .. figure:: /front_page_assets/other_annotations.png
    :align: right
-   :width: 30%
+   :width: 50%
  
 But wait, that's not all. There is a slew of additional non-coding sequence content in the genome that should be identified and annotated. A notable one being the repetetitive elements that were masked earlier. These play a huge role in genome evolution including messing with cis-regulatory elements that can result in chances in phenotype. Good examples including the origins of mammary glands and placentas in placental mammals. Additionally Organelle genomes should be checked for completeness and gene content as those are rather important to life and shouldn't be overlooked during the larger genome assembly process. There are many other interesting parts of the genome to include, some of which are listed to the left. Some genome sequencing projects put in the effort to identify and annotate these features, but this is time consuming and most projects do not. 
 
