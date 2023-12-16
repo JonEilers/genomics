@@ -31,6 +31,9 @@ An additional aspect of doing data quality control prior to assembly is somethin
    :align: center
    :width: 100%
 
+.. raw:: html
+
+   <div style="margin-bottom:20px;"></div>
 
 Let's say the data looks great, adapters have been removed, low quality reads filtered from the datasets, etc. It's time to do some assembly. There are numerous assembly tools and pipelines. It is considered good practice to try a few variations of each as every dataset has unique charactistics that may work better with one tool compared to others. Generally, this happens at every step of the assembly process. IE, try three different contig assemblers, check the quality of the resulting assemblies, pick one, polish the assembly using short reads, and move onto scaffolding. Same applies to the Hi-C scaffolding step. After Hi-C scaffolding, there are often structural errors that can then be corrected using optical genome mapping. However, recent years have seen successful chromosome scale assembly without OGM so there has been a move away from using it unless the genome is large and particularly complex. 
 
