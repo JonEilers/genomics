@@ -3,7 +3,7 @@ Welcome to Analytical Genomics' Tutorials!
 
 In the upcoming years the number of species with genome assemblies is going to explode. There are an estimated 8.7 million species according to a `2011 study <https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001127&utm_campaign=Au%20fil%20des%20lectures&utm_medium=email&utm_source=Revue%20newsletter>`_ and each species will need multiple assemblies to generate a `pangenome <https://library.oapen.org/bitstream/handle/20.500.12657/37707/1/2020_Book_ThePangenome.pdf#page=98>`_. Recent years have seen genome sequencing projects become more common and accessible. This will only become more true as long read sequencing becomes cheaper. However, the tools and knowledge to assemble and annotate a genome are scattered across scientific papers, github repositories, and academic institutions. 
 
-My goal is to distill the basics into one website that is understandable and accessible to encourage scientists and the curious that genome sequencing projects are acheivable without needing wads of cash and a team of scientists. It is my hope that someday sequencing technology and assembly are so accessible that a child or intrepid explorer stumbling across an interesting bug or novel plant phenotype could take it home and submit it for genome sequencing without needing to sell an arm or leg or brave the ivory tower that academics hole up in. 
+My goal is to distill the basics into one website that is understandable and accessible to encourage scientists and the curious that genome sequencing projects are acheivable without needing wads of cash and a team of scientists. It is my hope that someday sequencing technology and assembly are so accessible that a child or intrepid explorer stumbling across an interesting bug or novel plant phenotype could take it home and submit it for genome sequencing without needing to sell an arm and leg or brave the ivory tower that academics hole up in. 
 
 .. figure:: /front_page_assets/short_version.png
    :align: left
@@ -43,7 +43,7 @@ Once that's done and gene models predicted, it is time to get some summary stati
 
 .. figure:: /front_page_assets/other_annotations.png
    :align: right
-   :width: 50%
+   :width: 30%
  
 But wait, that's not all. There is a slew of additional non-coding sequence content in the genome that should be identified and annotated. A notable one being the repetetitive elements that were masked earlier. These play a huge role in genome evolution including messing with cis-regulatory elements that can result in chances in phenotype. Good examples including the origins of mammary glands and placentas in placental mammals. Additionally Organelle genomes should be checked for completeness and gene content as those are rather important to life and shouldn't be overlooked during the larger genome assembly process. There are many other interesting parts of the genome to include, some of which are listed to the left. Some genome sequencing projects put in the effort to identify and annotate these features, but this is time consuming and most projects do not. 
 
