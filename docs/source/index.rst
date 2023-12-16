@@ -36,7 +36,7 @@ Before diving in though, allow me to share an outline of what
 
 .. figure:: /front_page_assets/other_annotations.png
    :align: right
-   :width: 100%
+   :width: 50%
  
 .. warning:: This page is currently under construction with new content and mistakes added regularly.
 
