@@ -29,7 +29,7 @@ Before diving in though, allow me to share an outline of what
 .. figure:: /front_page_assets/assembly.png
    :align: center
    :width: 100%
-
+ 
 .. warning:: This page is currently under construction with new content and mistakes added regularly.
 
 Contents
