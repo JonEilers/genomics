@@ -44,6 +44,11 @@ An additional aspect of doing data quality control prior to assembly is somethin
 
 Let's say the data looks great, adapters have been removed, low quality reads filtered from the datasets, etc. It's time to do some assembly. There are numerous assembly tools and pipelines. It is considered good practice to try a few variations of each as every dataset has unique charactistics that may work better with one tool compared to others. Generally, this happens at every step of the assembly process. IE, try three different contig assemblers, check the quality of the resulting assemblies, pick one, polish the assembly using short reads, and move onto scaffolding. Same applies to the Hi-C scaffolding step. After Hi-C scaffolding, there are often structural errors that can then be corrected using optical genome mapping. However, recent years have seen successful chromosome scale assembly without OGM so there has been a move away from using it unless the genome is large and particularly complex. 
 
+.. toctree::
+
+   genome_assembly
+   genome_assembly_qc
+
 .. figure:: /front_page_assets/annotation.png
    :align: center
    :figwidth: 100%
@@ -68,19 +73,5 @@ But wait, that's not all. There is a slew of additional non-coding sequence cont
 
    genome_annotation
 
-Here I have detailed the tools I’ve used and the process I go through to create genome assemblies, predict genes, and analyze results. When reading these walk-throughs, keep in mind that it’s a rare day when everything works the first time. More time is spent troubleshooting installation problems and learning how to use a tool than is spent actually using the tool. So if you find yourself struggling to get things working, rest assured, that’s a battle we all fight everyday.
 
 
-
-.. warning:: This page is currently under construction with new content and mistakes added regularly.
-
-Contents
---------
-
-.. toctree::
-
-   data_cleaning
-   genome_assembly
-   genome_assembly_qc
-   genome_annotation
- 
