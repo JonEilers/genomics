@@ -16,6 +16,7 @@ On the surface, genome sequencing projects are fairly straightforwad. It begins 
    :align: center
    :width: 100%
 
+
 In order to achieve the highest quality and most contigious genome assembly (preferably chromsome length scaffolds or telomere to telomere) several different data types are required. The first and most important are long reads, these are sequences that are 10,000 bases to 100,000 bases long. Without these your assembly will be very fragmented. The second most important data type is what's called Hi-C. This is a technique to capture the chromatin conformation within a nucleus. It also happens to allow for chromsome scale scaffolding because sequences that are close to eachother in the nucleus also tend to be from the same chromosome. Current long read sequencing isn't quite accurate enough, so there will likely be assembly errors. Short reads can correct the majority of these. For larger assembly errors, optical genome mapping does the trick. Neither of these are necessary for a genome sequencing project, but they greatly improve the quality of the assembly. Finally, assemblies are great, but the reality is they are just a wall of ATGC text and most people are interested in what that wall of text contains - genes. Unless the genome has previously been assembled and there are quality gene models, it will be necessary to predict where genes are and the gene structure is. That is where rna-seq data comes in handy and is arguably the best type of data for that. 
 
 .. figure:: /front_page_assets/data_cleaning.png
@@ -30,11 +31,13 @@ An additional aspect of doing data quality control prior to assembly is somethin
    :align: center
    :width: 100%
 
+
 Let's say the data looks great, adapters have been removed, low quality reads filtered from the datasets, etc. It's time to do some assembly. There are numerous assembly tools and pipelines. It is considered good practice to try a few variations of each as every dataset has unique charactistics that may work better with one tool compared to others. Generally, this happens at every step of the assembly process. IE, try three different contig assemblers, check the quality of the resulting assemblies, pick one, polish the assembly using short reads, and move onto scaffolding. Same applies to the Hi-C scaffolding step. After Hi-C scaffolding, there are often structural errors that can then be corrected using optical genome mapping. However, recent years have seen successful chromosome scale assembly without OGM so there has been a move away from using it unless the genome is large and particularly complex. 
 
 .. figure:: /front_page_assets/annotation.png
    :align: center
    :figwidth: 100%
+
 
 The assembly is chromsome scale, maybe telomere to telomere, gapless, polished, and biological contamination removed. That's a nice looking genome assembly. To find the interesting bits inside that string of letters requires a bit of work though. First is mapping gene expression data to the assembly. This tells you where genes are and possibly what the structure is. However, unless you have gene expression data from every tissue type and developmental stage, there is a good chance some genes will not have expression data to guide gene model prediction. Aligning protein sequences from NCBI's refseq and Uniprot, possibly using proteins from closely related species, is a considered standard practice. To get the rest of way though you need a tool which can predict gene models using what's called "intrinsic" information. These are the start codons, splice sites, and stop codons which tell the algorithm where coding sequence starts and ends. 
 
