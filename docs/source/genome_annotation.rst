@@ -15,16 +15,10 @@ Gene content is not the only challenge though, acquiring correct gene model stru
 
 That said, let's take a look at what it takes to predict gene models and functional annotations. The primary steps are: repetitive elements identification and masking, gene expression data mapping, protein database alignment, de novo gene prediction, and functional annotation of gene models. While this is the primary pipeline for gene prediction, the genome contains numerous other sequences of interest such as `cis-regulatory elements <https://en.wikipedia.org/wiki/Cis-regulatory_element>`_, `non-coding genes <https://en.wikipedia.org/wiki/Non-coding_DNA>`_, and organelle genomes such as `mitochondria <https://en.wikipedia.org/wiki/Mitochondrial_DNA>`_ and `chloroplasts <https://en.wikipedia.org/wiki/Chloroplast_DNA>`_, and there are a number of tools and analyses that can be done to find those. These additional steps will be covered later though. 
 
-The first step is identifying and masking `repetitive elements <https://en.wikipedia.org/wiki/Repeated_sequence_(DNA)>`_ (RE) and `transposons <https://en.wikipedia.org/wiki/Transposable_element>`_ (TE) in the genome assembly. This is mostly to reduce the computational load during gene prediction as genomes can be up to two-thirds TEs and REs. By masking them, the gene prediction tools only have to search a much smaller sequence space for genes. However, as noted later, TEs have genes and genes are sometimes located in RE such as in the `centromeres <https://www.science.org/doi/full/10.1126/science.abl4178>`_ and `subtelomeres <https://www.sciencedirect.com/science/article/pii/S0022283620300905>`_ of chromosomes. So this step should not be considered lightly and the result should be analyzed with care and an eye for mis-masked regions. 
-
-The next two steps are gene expression data (`rna-seq <https://en.wikipedia.org/wiki/RNA-Seq>`_) mapping and protein database alignment(e.g. `Uniprot <https://en.wikipedia.org/wiki/UniProt>`_ and `Refseq <https://en.wikipedia.org/wiki/RefSeq>`_). Mapping rna-seq data represents gene expression and is key data for finding where genes are located in a genome and what the structure of the gene is (i.e. `exons <https://en.wikipedia.org/wiki/Exon>`_ and `introns <https://en.wikipedia.org/wiki/Intron>`_). Additionally, publicly available protein databases contain millions of protein sequences which can be used to inform where start, stop, and splice sites are located. This can be particularly useful as gene expression data does not always contain information on every gene. This is due to gene expression being tissue specific and if there is no gene expression atlas of all tissue types and developmental stages, then some genes may not have expression data to corroborate their existence. Additionaly, protein databases can contain manually curated gene models where someone has checked the evidence for the gene stucture and corrected any errors.
-
-Finally, gene prediction tolls utilize the masked genome along with the mapped extrinsic data and intrisic knowledge of how genes are structured (start and stop codons, splices sites, etc) to find putative genes and predict the structure of the gene, aka gene model. Once complete, the final step is to associate functional annotations to the predicted genes. There are two approaches to this, the first is uses homology to known genes to assign either a name or function to the gene. The second is to look at the amino acid seqeunce, compare to known protein domains, and predict what that protein does. This last step is arguably the least accurate of all the steps as errors from low-quality genomes and incomplete download of protein fucntional domains tends to result in questionable annotations. However, it is a starting point for manual curation and analyse. 
-
-Manual curation of gene models is considered the gold standard for producing high-confidence gene models and annotations. It also happens to be very time consuming as it requires examining gene expression data and protein alignment data to assess the gene model and then manually modify and submit the change. Suffice to say very few projects do this. However, recent years have seen significant effort to do this for the complete gene set of organisms such as `C. briggsae <https://link.springer.com/article/10.1186/s12864-023-09582-0>`_ and in some cases for subsets such as `olfactory genes of mice and men <https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6583-3>`_.
-
 Repetitive Element Identification and Masking
 ----------
+
+The first step is identifying and masking `repetitive elements <https://en.wikipedia.org/wiki/Repeated_sequence_(DNA)>`_ (RE) and `transposons <https://en.wikipedia.org/wiki/Transposable_element>`_ (TE) in the genome assembly. This is mostly to reduce the computational load during gene prediction as genomes can be up to two-thirds TEs and REs. By masking them, the gene prediction tools only have to search a much smaller sequence space for genes. However, as noted later, TEs have genes and genes are sometimes located in RE such as in the `centromeres <https://www.science.org/doi/full/10.1126/science.abl4178>`_ and `subtelomeres <https://www.sciencedirect.com/science/article/pii/S0022283620300905>`_ of chromosomes. So this step should not be considered lightly and the result should be analyzed with care and an eye for mis-masked regions. 
 
 Genomes are a quagmire of nucleic acids strung together. Over the billions of year of genome evolution, genomes have gone through multiple rounds of duplication events. Through duplication, all sequences are multiplied, then as evolution takes it course, those sequences mutate or are lost. Additionally, within the genome are sequences which can jump around and duplicate themselves, resulting in further repeats and in some cases, greatly increased genome size. `Structural and sequence diversity of eukaryotic
 transposable elements <https://www.jstage.jst.go.jp/article/ggs/advpub/0/advpub_18-00024/_pdf/-char/ja>`_ is a great review of the diversity of these "jumping genes'.
@@ -37,12 +31,15 @@ For genome projects, the goal is identifying and "masking" repetitive elements i
 
 Below is a link to a page in which I have used two different pipelines to identify and annotate the repetitive elements in a sea cucumber genome. 
 
+.. toctree::
 
-.. note:: :doc:`Repetitive Element Identification and Masking <annotation/repetitive_elements>`
-.. note:: :doc:`Manual Curation and Annotation of Transposable Elements <annotation/manual_te_annotation>`
+   repetitive_elements
+   manual_te_annotation
 
-Expression Data Mapping
+Expression Data Mapping and Protein Database Alignment
 ----------
+
+The next two steps are gene expression data (`rna-seq <https://en.wikipedia.org/wiki/RNA-Seq>`_) mapping and protein database alignment(e.g. `Uniprot <https://en.wikipedia.org/wiki/UniProt>`_ and `Refseq <https://en.wikipedia.org/wiki/RefSeq>`_). Mapping rna-seq data represents gene expression and is key data for finding where genes are located in a genome and what the structure of the gene is (i.e. `exons <https://en.wikipedia.org/wiki/Exon>`_ and `introns <https://en.wikipedia.org/wiki/Intron>`_). Additionally, publicly available protein databases contain millions of protein sequences which can be used to inform where start, stop, and splice sites are located. This can be particularly useful as gene expression data does not always contain information on every gene. This is due to gene expression being tissue specific and if there is no gene expression atlas of all tissue types and developmental stages, then some genes may not have expression data to corroborate their existence. Additionaly, protein databases can contain manually curated gene models where someone has checked the evidence for the gene stucture and corrected any errors.
 
 The central dogma of molecular biology states that the flow of information in the cell is DNA to RNA to Protein. While not exactly true, it is true that if we want to know what proteins are present in the cell we can look at what rna is present. Additionally, if we want to what genes are "turned on" we can look at rna. We can also use this gene expression data as a way to identify where genes are located in the genome assembly and determine their structure. 
 
@@ -54,23 +51,21 @@ Not all genes are being expressed at the same time and in the same tissue. Thus,
 
 Not only will the mapped reads be used in gene model creation, but the mapping rates and indel rates will tell me something about the quality of the genome assembly. 
 
-.. note:: :doc:`RNA-Seq mapping <annotation/rna-seq_mapping>`
+.. toctree::
 
-
-Protein Database Alignment
---------------------------
-
-.. note:: :doc:`Aligning Proteins from a database to the assembly <annotation/protein_database_alignment>`
-
-
+   rna-seq_mapping
+   protein_database_alignment
 
 Gene Model Prediction
 ----------
 
+Finally, gene prediction tolls utilize the masked genome along with the mapped extrinsic data and intrisic knowledge of how genes are structured (start and stop codons, splices sites, etc) to find putative genes and predict the structure of the gene, aka gene model. Once complete, the final step is to associate functional annotations to the predicted genes. There are two approaches to this, the first is uses homology to known genes to assign either a name or function to the gene. The second is to look at the amino acid seqeunce, compare to known protein domains, and predict what that protein does. This last step is arguably the least accurate of all the steps as errors from low-quality genomes and incomplete download of protein fucntional domains tends to result in questionable annotations. However, it is a starting point for manual curation and analyse. 
+
+Manual curation of gene models is considered the gold standard for producing high-confidence gene models and annotations. It also happens to be very time consuming as it requires examining gene expression data and protein alignment data to assess the gene model and then manually modify and submit the change. Suffice to say very few projects do this. However, recent years have seen significant effort to do this for the complete gene set of organisms such as `C. briggsae <https://link.springer.com/article/10.1186/s12864-023-09582-0>`_ and in some cases for subsets such as `olfactory genes of mice and men <https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6583-3>`_.
+
 The crux of any genome project is predicting gene models. A `gene model <https://en.wikipedia.org/wiki/Gene_structure>`_ is composed of a 5' untranslated region, start site, an open reading frame containing introns and exons, stop codon, and 3' untranslated region. While we know the general structure of genes, there is enough variation and rule breaking that achieving high confidence gene models has proven to be a difficult task. Tools such as Maker and Braker have attempted to create automated pipelines to simplify the process, but the results have been less than perfect. Recently the Braker group published a tool called `Tserba <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04482-0>`_ to combine gene predictions using different sets of evidence. One group recently published a paper titled `Foster thy young: enhanced prediction of orphan genes in assembled genomes <https://academic.oup.com/nar/article/50/7/e37/6470686?login=true>`_ in which they found combining the two pipelines (Maker and Braker) improves the identification of "orphan genes" or genes that have evolved recently.
 
 These tools use two different types of data often termed intrinsic and extrinsic. Intrinsic data is going to be data gleaned directly from the organism such as gene expression data or protein sequence data. Extrinsic data can be found in protein databases such as uniprot or orthoDB which have sequences of known structure and function which can be used to "infer" the sequence and structure in your organism of choice. See below for examples of using both datatypes and pipelines 
-
 
 Additionally, some databases such as Echinobase are trying to systematize their workflow, insure quality, and increase reproducibility by requiring all echinoderm genome projects to go through NCBI's `gene prediction pipeline <https://www.ncbi.nlm.nih.gov/genome/annotation_euk/process/>`_ before allowing the genome, gene models, and annotations to be hosted on echinobase. 
 
