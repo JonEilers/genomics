@@ -31,10 +31,9 @@ For genome projects, the goal is identifying and "masking" repetitive elements i
 
 Below is a link to a page in which I have used two different pipelines to identify and annotate the repetitive elements in a sea cucumber genome. 
 
-.. toctree::
-
-   repetitive_elements
-   manual_te_annotation
+* :doc:`An Introduction to Repetitive Elements and Transposable Elements </annotation/repetitive_elements>`
+* :doc:`Using TeTools to Identify and Mask Repetitive Elements and Transposons </anotation/tetools>`
+* :doc:`Manual Annotation and Curation of Transposable Elements </annotation/manual_te_annotation>`
 
 Expression Data Mapping and Protein Database Alignment
 ----------
