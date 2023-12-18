@@ -1,0 +1,16 @@
+# http://www.graphviz.org/content/cluster
+
+digraph G {
+  graph [fontname = "Handlee", label = "The Short Version", labelloc=t, fontsize=20,];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+
+"Repetitive Element Masking" -> "RNA-Seq Mapping"
+"Repetitive Element Masking" -> "Protein Database Alignment"
+"RNA-Seq Mapping" -> "Gene Prediction"
+"Protein Database Alignment" -> "Gene Prediction"
+"Gene Prediction" -> "Functional Annotation"
+}
+
