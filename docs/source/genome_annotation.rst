@@ -19,6 +19,24 @@ Finally, gene prediction tolls utilize the masked genome along with the mapped e
 
 Manual curation of gene models is considered the gold standard for producing high-confidence gene models and annotations. It also happens to be very time consuming as it requires examining gene expression data and protein alignment data to assess the gene model and then manually modify and submit the change. Suffice to say very few projects do this. However, recent years have seen significant effort to do this for the complete gene set of organisms such as `C. briggsae <https://link.springer.com/article/10.1186/s12864-023-09582-0>`_ and in some cases for subsets such as `olfactory genes of mice and men <https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6583-3>`_.
 
+Repetitive Element Identification and Masking
+----------
+
+Genomes are a quagmire of nucleic acids strung together. Over the billions of year of genome evolution, genomes have gone through multiple rounds of duplication events. Through duplication, all sequences are multiplied, then as evolution takes it course, those sequences mutate or are lost. Additionally, within the genome are sequences which can jump around and duplicate themselves, resulting in further repeats and in some cases, greatly increased genome size. `Structural and sequence diversity of eukaryotic
+transposable elements <https://www.jstage.jst.go.jp/article/ggs/advpub/0/advpub_18-00024/_pdf/-char/ja>`_ is a great review of the diversity of these "jumping genes'.
+
+In recent years repetitive elements, once termed "junk dna", have been found to play important roles in gene regulation. Transposable elements, for example, can contain sequences that recruit transcription factors. A paper titled "`Roles of transposable elements in the regulation of mammalian transcription <https://www.nature.com/articles/s41580-022-00457-y>`_" goes into detail regarding the impact TEs can have on gene regulation. A different paper titled `Repetitive Elements in Humans <https://www.mdpi.com/1422-0067/22/4/2072/htm>`_ offers a more detailed review of repetitive elements in humans. `Centromere Repeats: Hidden Gems of the Genome <https://www.mdpi.com/2073-4425/10/3/223>`_
+
+Identifying repetitive elements in genome assemblies is an underappreciated task which is often performed in order to get to the "interesting" parts of the genome such as genes. However, it is looking more and more like genome assembly and annotation projects should also invest time into identifying and annotating the repetitive elements of the genome too. This paper - "`A Roadmap for Understanding the Evolutionary Significance of Structural Genomic Variation <https://www.sciencedirect.com/science/article/abs/pii/S0169534720300768>`_ outlines the importance of studying structural genome variation which includes incorporating repetitive elements into a broader understanding of genome regulation and evolution. 
+
+For genome projects, the goal is identifying and "masking" repetitive elements in the assembly. The first reason is so that the gene modeling tool doesn't have to go search through the 50%-90% of an assembly that is repetitive sequences. The second reason is that some repetitive elements such as transposable elements contain genes within them which are specific to their ability to "jump" around the genome or create duplicates of themselves. Those genes are not particularly interesting to most researchers and shouldn't be included in the gene prediction process. Due to the repetitive nature of transposable elements, these genes may have numerous copies which could impact downstream analysis. 
+
+Below is a link to a page in which I have used two different pipelines to identify and annotate the repetitive elements in a sea cucumber genome. 
+
+
+.. note:: :doc:`Repetitive Element Identification and Masking <annotation/repetitive_elements>`
+.. note:: :doc:`Manual Curation and Annotation of Transposable Elements <annotation/manual_te_annotation>`
+
 Expression Data Mapping
 ----------
 
@@ -40,23 +58,6 @@ Protein Database Alignment
 
 .. note:: :doc:`Aligning Proteins from a database to the assembly <annotation/protein_database_alignment>`
 
-Repetitive Element Identification and Masking
-----------
-
-Genomes are a quagmire of nucleic acids strung together. Over the billions of year of genome evolution, genomes have gone through multiple rounds of duplication events. Through duplication, all sequences are multiplied, then as evolution takes it course, those sequences mutate or are lost. Additionally, within the genome are sequences which can jump around and duplicate themselves, resulting in further repeats and in some cases, greatly increased genome size. `Structural and sequence diversity of eukaryotic
-transposable elements <https://www.jstage.jst.go.jp/article/ggs/advpub/0/advpub_18-00024/_pdf/-char/ja>`_ is a great review of the diversity of these "jumping genes'.
-
-In recent years repetitive elements, once termed "junk dna", have been found to play important roles in gene regulation. Transposable elements, for example, can contain sequences that recruit transcription factors. A paper titled "`Roles of transposable elements in the regulation of mammalian transcription <https://www.nature.com/articles/s41580-022-00457-y>`_" goes into detail regarding the impact TEs can have on gene regulation. A different paper titled `Repetitive Elements in Humans <https://www.mdpi.com/1422-0067/22/4/2072/htm>`_ offers a more detailed review of repetitive elements in humans. `Centromere Repeats: Hidden Gems of the Genome <https://www.mdpi.com/2073-4425/10/3/223>`_
-
-Identifying repetitive elements in genome assemblies is an underappreciated task which is often performed in order to get to the "interesting" parts of the genome such as genes. However, it is looking more and more like genome assembly and annotation projects should also invest time into identifying and annotating the repetitive elements of the genome too. This paper - "`A Roadmap for Understanding the Evolutionary Significance of Structural Genomic Variation <https://www.sciencedirect.com/science/article/abs/pii/S0169534720300768>`_ outlines the importance of studying structural genome variation which includes incorporating repetitive elements into a broader understanding of genome regulation and evolution. 
-
-For genome projects, the goal is identifying and "masking" repetitive elements in the assembly. The first reason is so that the gene modeling tool doesn't have to go search through the 50%-90% of an assembly that is repetitive sequences. The second reason is that some repetitive elements such as transposable elements contain genes within them which are specific to their ability to "jump" around the genome or create duplicates of themselves. Those genes are not particularly interesting to most researchers and shouldn't be included in the gene prediction process. Due to the repetitive nature of transposable elements, these genes may have numerous copies which could impact downstream analysis. 
-
-Below is a link to a page in which I have used two different pipelines to identify and annotate the repetitive elements in a sea cucumber genome. 
-
-
-.. note:: :doc:`Repetitive Element Identification and Masking <annotation/repetitive_elements>`
-.. note:: :doc:`Manual Curation and Annotation of Transposable Elements <annotation/manual_te_annotation>`
 
 
 Gene Model Prediction
