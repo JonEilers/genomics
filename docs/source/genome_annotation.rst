@@ -31,20 +31,8 @@ Expression Data Mapping and Protein Database Alignment
 
 The next two steps are gene expression data (`rna-seq <https://en.wikipedia.org/wiki/RNA-Seq>`_) mapping and protein database alignment(e.g. `Uniprot <https://en.wikipedia.org/wiki/UniProt>`_ and `Refseq <https://en.wikipedia.org/wiki/RefSeq>`_). Mapping rna-seq data represents gene expression and is key data for finding where genes are located in a genome and what the structure of the gene is (i.e. `exons <https://en.wikipedia.org/wiki/Exon>`_ and `introns <https://en.wikipedia.org/wiki/Intron>`_). Additionally, publicly available protein databases contain millions of protein sequences which can be used to inform where start, stop, and splice sites are located. This can be particularly useful as gene expression data does not always contain information on every gene. This is due to gene expression being tissue specific and if there is no gene expression atlas of all tissue types and developmental stages, then some genes may not have expression data to corroborate their existence. Additionaly, protein databases can contain manually curated gene models where someone has checked the evidence for the gene stucture and corrected any errors.
 
-The central dogma of molecular biology states that the flow of information in the cell is DNA to RNA to Protein. While not exactly true, it is true that if we want to know what proteins are present in the cell we can look at what rna is present. Additionally, if we want to what genes are "turned on" we can look at rna. We can also use this gene expression data as a way to identify where genes are located in the genome assembly and determine their structure. 
-
-Identifying genes and their structure in the genome assembly is a difficult task. Having some gene expression data increases the confidence in those gene models significantly. 
-
-Currently the majority of gene expression data is in the form of Illumina rna-seq. In the past few years both Oxford Nanopore Technologies and Pacbio have released their own version of long read rna sequencing. In the case of ONT, they directly sequence the rna. There is no need to turn it into DNA or fragment it before sequencing. 
-
-Not all genes are being expressed at the same time and in the same tissue. Thus, when generating gene models for an assembly, it is a good idea to have gene expression data for as many different tissue types and life stages as possible. In the example I used data from all the developmental stages of sea cucumber in addition to a number of different tissue types. 
-
-Not only will the mapped reads be used in gene model creation, but the mapping rates and indel rates will tell me something about the quality of the genome assembly. 
-
-.. toctree::
-
-   rna-seq_mapping
-   protein_database_alignment
+* :doc:`Mapping Gene Expression Data to the Genome Assembly </annotation/rna-seq_mapping>`
+* :doc:`Aligning Protein Databases to the Genome Assembly </annotation/protein_database_alignment>`
 
 Gene Model Prediction
 ----------
@@ -53,16 +41,23 @@ Finally, gene prediction tolls utilize the masked genome along with the mapped e
 
 Manual curation of gene models is considered the gold standard for producing high-confidence gene models and annotations. It also happens to be very time consuming as it requires examining gene expression data and protein alignment data to assess the gene model and then manually modify and submit the change. Suffice to say very few projects do this. However, recent years have seen significant effort to do this for the complete gene set of organisms such as `C. briggsae <https://link.springer.com/article/10.1186/s12864-023-09582-0>`_ and in some cases for subsets such as `olfactory genes of mice and men <https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-020-6583-3>`_.
 
-The crux of any genome project is predicting gene models. A `gene model <https://en.wikipedia.org/wiki/Gene_structure>`_ is composed of a 5' untranslated region, start site, an open reading frame containing introns and exons, stop codon, and 3' untranslated region. While we know the general structure of genes, there is enough variation and rule breaking that achieving high confidence gene models has proven to be a difficult task. Tools such as Maker and Braker have attempted to create automated pipelines to simplify the process, but the results have been less than perfect. Recently the Braker group published a tool called `Tserba <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04482-0>`_ to combine gene predictions using different sets of evidence. One group recently published a paper titled `Foster thy young: enhanced prediction of orphan genes in assembled genomes <https://academic.oup.com/nar/article/50/7/e37/6470686?login=true>`_ in which they found combining the two pipelines (Maker and Braker) improves the identification of "orphan genes" or genes that have evolved recently.
+ A `gene model <https://en.wikipedia.org/wiki/Gene_structure>`_ is composed of a 5' untranslated region, start site, an open reading frame containing introns and exons, stop codon, and 3' untranslated region. While we know the general structure of genes, there is enough variation and rule breaking that achieving high confidence gene models has proven to be a difficult task. Tools such as Maker and Braker have attempted to create automated pipelines to simplify the process, but the results have been less than perfect. Recently the Braker group published a tool called `Tserba <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04482-0>`_ to combine gene predictions using different sets of evidence. One group recently published a paper titled `Foster thy young: enhanced prediction of orphan genes in assembled genomes <https://academic.oup.com/nar/article/50/7/e37/6470686?login=true>`_ in which they found combining the two pipelines (Maker and Braker) improves the identification of "orphan genes" or genes that have evolved recently.
 
-These tools use two different types of data often termed intrinsic and extrinsic. Intrinsic data is going to be data gleaned directly from the organism such as gene expression data or protein sequence data. Extrinsic data can be found in protein databases such as uniprot or orthoDB which have sequences of known structure and function which can be used to "infer" the sequence and structure in your organism of choice. See below for examples of using both datatypes and pipelines 
+Functional Annotation and Analysis
+----------
 
-Additionally, some databases such as Echinobase are trying to systematize their workflow, insure quality, and increase reproducibility by requiring all echinoderm genome projects to go through NCBI's `gene prediction pipeline <https://www.ncbi.nlm.nih.gov/genome/annotation_euk/process/>`_ before allowing the genome, gene models, and annotations to be hosted on echinobase. 
+Discussion about the tools used for functional annotation, like InterProScan, EggNOG-mapper, Panzzer2, etc.
+
+
+Visualizing and Editing Gene Models and Annotations
+----------
+
+Information about tools like Apollo, JBrowse2 for visualizing and editing gene models and annotations...
+
+
 
 Non-Protein Coding and Other Functional Element Prediction
 ----------
-
-While most scientists are focused on the glamor of genes. The genome contains numerous other functional elements that need to be identified and annotated before a genome can be said to be to "annotated'. I previously talked about repetitive elements, but there are also non-coding RNAs, organelle genomes, promotors, enhancers, chromatin binding sites, transcription binding sites, etc. 
 
 Non-Coding RNA
 --------------
@@ -89,16 +84,4 @@ Transcription and Chromatin Binding Sites
 
 Enhancers and Promoters
 -----------------------
-
-
-
-Functional Annotation
-----------
-
-Discussion about the tools used for functional annotation, like InterProScan, EggNOG-mapper, Panzzer2, etc.
-
-Visualizing and Editing Gene Models and Annotations
-----------
-
-Information about tools like Apollo, JBrowse2 for visualizing and editing gene models and annotations...
 
