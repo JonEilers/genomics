@@ -13,8 +13,7 @@ That said, let's take a look at what it takes to predict gene models and functio
 
 .. figure:: /annotation/annotation_page_assets/annotation_short_version.png
    :align: left
-   :width: 80%
-   :figwidth: 40%
+   :figwidth: 50%
    
 The first step is identifying and masking `repetitive elements <https://en.wikipedia.org/wiki/Repeated_sequence_(DNA)>`_ (RE) and `transposons <https://en.wikipedia.org/wiki/Transposable_element>`_ (TE) in the genome assembly. This is mostly to reduce the computational load during gene prediction as genomes can be up to two-thirds TEs and REs. By masking them, the gene prediction tools only have to search a much smaller sequence space for genes. However, as noted later, TEs have genes and genes are sometimes located in RE such as in the `centromeres <https://www.science.org/doi/full/10.1126/science.abl4178>`_ and `subtelomeres <https://www.sciencedirect.com/science/article/pii/S0022283620300905>`_ of chromosomes. So this step should not be considered lightly and the result should be analyzed with care and an eye for mis-masked regions. 
 
