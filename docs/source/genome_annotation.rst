@@ -43,18 +43,22 @@ Manual curation of gene models is considered the gold standard for producing hig
 
 A `gene model <https://en.wikipedia.org/wiki/Gene_structure>`_ is composed of a 5' untranslated region, start site, an open reading frame containing introns and exons, stop codon, and 3' untranslated region. While we know the general structure of genes, there is enough variation and rule breaking that achieving high confidence gene models has proven to be a difficult task. Tools such as Maker and Braker have attempted to create automated pipelines to simplify the process, but the results have been less than perfect. Recently the Braker group published a tool called `Tserba <https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04482-0>`_ to combine gene predictions using different sets of evidence. One group recently published a paper titled `Foster thy young: enhanced prediction of orphan genes in assembled genomes <https://academic.oup.com/nar/article/50/7/e37/6470686?login=true>`_ in which they found combining the two pipelines (Maker and Braker) improves the identification of "orphan genes" or genes that have evolved recently.
 
+* :doc:`Gene Prediction using Braker <annotation/braker_gene_prediction>`
+* :doc:`Gene Prediction using Maker and Augustus <annotation/maker_gene_prediction>`
+* :doc:`Combining Evidence using EvidenceModler or Tserba <annotation/combining_evidence>`
+* :doc:`Visualizing and Editing Gene Models <annotation/manual_curation>`
+
 Functional Annotation and Analysis
 ----------
 
-Discussion about the tools used for functional annotation, like InterProScan, EggNOG-mapper, Panzzer2, etc.
+Once there the gene models look good, it is important to assign some functional annotation to each one. There are two reasons for this, the first is that it can save a lot of time if someone is looking for an ortholog. The second is that these functional annotation can then be fed into various tools to look for enrichment of specific functions, study how the genome and genes have evolved, or identify changes in function. However, there is a very large caveat to these annotations, they are likely not accurate. As noted multiple times throughout the annotation section, erroneaous annotations from previous projects have been propagated by automatic annotation tools to other genome annotations and have thus become established in databases as "truth". It is necessary to manually inspect the gene and compare it to known orthologs in order to trust it. This is all to say, use functional annotations as a starting point, but don't put your career on the line without verifying the truth of those annotations. 
 
+There are essentially three different approaches to functional annotation: use Gene Ontology to prediction whole gene function, use protein domain based methods to predict what parts of the protein do, and blast against a database of genes to find orthologs and assign the same name. The last is how annotation errors survive and thrive. Whereas gene model prediction methods and tools are starting to mature, functional annotation is still something of a wild west with new tools and methods published frequently and no real standard has been established regarding quality. However, what can be said is that Gene Ontology names are assigned first, if there is no confident GO, then functional domains are used, then blast results, and finally if there is no ortholog then "unmamed protein".
 
-Visualizing and Editing Gene Models and Annotations
-----------
-
-Information about tools like Apollo, JBrowse2 for visualizing and editing gene models and annotations...
-
-
+* :doc:`Functional Annotation using Gene Ontology <annotation/gene_ontology>`
+* :doc:`Protein Domain Annotation using InterProScan and EggNOG-mapper <annotation/protein_domain_annotation>`
+* :doc:`Ortholog search using Blast and NCBI <annotation/annotation_via_ortholog>`
+* :doc:`Evalauting functional annotations <annotation/functional_evaluation>`
 
 Non-Protein Coding and Other Functional Element Prediction
 ----------
