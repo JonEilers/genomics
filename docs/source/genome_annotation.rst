@@ -71,11 +71,12 @@ tfam, dfam, rfam
 `Long Noncoding RNAs and Repetitive Elements: Junk or Intimate Evolutionary Partners? <https://www.sciencedirect.com/science/article/pii/S0168952519301933>`_
 
 
-Transcription and Chromatin Binding Sites
+Chromatin Binding Sites and Conformation, CpG Islands, and Methylation
 -----------------------------------------
 
-
-
-Enhancers and Promoters
+Enhancers, Promoters, and other Cis-Reguatlory Elements
 -----------------------
 
+
+Repetitive Elements and Transposons
+-------------------------------
