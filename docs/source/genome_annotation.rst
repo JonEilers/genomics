@@ -64,11 +64,15 @@ There are essentially three different approaches to functional annotation: use G
 Non-Coding RNA
 --------------
 
-tfam, dfam, rfam
+The human genome, a vast and intricate blueprint of life, is predicted to contain over 60,000 genes, yet less than 20,000 of these are believed to be protein-coding. This disparity raises an intriguing question: what functions do the remaining genes serve? The answer lies in the realm of non-coding RNAs (ncRNAs), which play critical roles in the molecular and cellular machinery of organisms. Non-coding RNAs come in various forms – from long non-coding RNAs (lncRNAs) involved in transcriptional regulation to microRNAs (miRNAs) and small interfering RNAs (siRNAs) that modulate gene expression post-transcriptionally. 
 
-`Integrative rDNAomics—Importance of the Oldest Repetitive Fraction of the Eukaryote Genome <https://www.mdpi.com/2073-4425/10/5/345>`_
+In addition to their role in gene regulation, ncRNAs are pivotal in `epigenetic modulation <https://www.nature.com/articles/s41580-022-00566-8>`_, altering gene expression patterns over time through mechanisms like DNA methylation and histone modification. This function is crucial during development and differentiation in multicellular organisms. Structurally, ncRNAs such as ribosomal RNA (rRNA) and transfer RNA (tRNA) are fundamental components of the protein synthesis machinery. They are also involved in essential cellular processes including cell cycle regulation, apoptosis, and stress responses. The versatility and indispensability of ncRNAs in biological systems are thus evident.
 
-`Long Noncoding RNAs and Repetitive Elements: Junk or Intimate Evolutionary Partners? <https://www.sciencedirect.com/science/article/pii/S0168952519301933>`_
+Moreover, the significance of ncRNAs extends to disease contexts, with their dysregulation being linked to various diseases including cancers, neurological disorders, and heart diseases. This association offers insights into disease mechanisms and potential therapeutic targets. Additionally, ncRNAs facilitate intercellular communication, often found in exosomes and influencing neighboring or distant cells. Their conservation across species underscores their evolutionary importance. Therefore, identifying and properly annotating ncRNAs in the genome assembly is not just a matter of cataloging; it's a crucial step in unraveling the complex orchestration of life at the molecular level, revealing intricate mechanisms fundamental to both health and disease. The ongoing discovery and study of ncRNAs continue to illuminate the vast, uncharted territories of non-protein-coding genes, offering profound insights into the complexities of genetic regulation and function.
+
+Because of the difficulty in differentiating ncRNA from protein-coding RNA, a combination of bioinformatic tools and ncRNA databases are utilized to identify and annotate ncRNA. Databases include: `NONCODE <http://www.noncode.org/>`_, `RNAcentral <https://rnacentral.org/>`_, `FANTOM <https://fantom.gsc.riken.jp/>`_, `RFAM <https://rfam.org/>`_, etc. Tools for identifying and annotating ncRNA are also numerous such as `Infernal <http://eddylab.org/infernal/>`_ and ncRNA type-specific tools such as for `tRNA <http://gtrnadb.ucsc.edu/>`_, `lncRNA <https://academic.oup.com/nar/article/45/8/e57/2798184?login=false>`_, `miRs <https://tools4mirs.org/>`_, and the list goes on (`piRNA, tsRNA, rRNA, snoRNA, sRNA, etc <https://pubmed.ncbi.nlm.nih.gov/29730207/>`_)
+
+* :doc:`An attempt at finding all the ncRNAs in an assembly <>`
 
 
 Chromatin Binding Sites and Conformation, CpG Islands, and Methylation
@@ -78,5 +82,4 @@ Enhancers, Promoters, and other Cis-Reguatlory Elements
 -----------------------
 
 
-Repetitive Elements and Transposons
--------------------------------
+
