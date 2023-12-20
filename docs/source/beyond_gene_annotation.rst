@@ -1,11 +1,6 @@
 Beyond Gene Annotation
 ===============
 
-.. _Beyond Gene Annotaiton:
-
-Beyond Gene Annotation
-____________
-
 Everything up to this point has focused on getting a genome assembly and annotating the genes within it. Realistically though, that is just the beginning of what can be identified and annotated within a genome. Genomes are extraordinarly complex, and we are only beginning to understand how chromatin conformation, post-translation modifications of proteins and RNA, and methylation control cell phenotype which culminates in the phenotypes we see and the development of whole multicellular organism from a single, amorphus, cell. I want to make a briefly write about additional data-types and what further annotations can be achieved using them.
 
 High-resolution Hi-C
