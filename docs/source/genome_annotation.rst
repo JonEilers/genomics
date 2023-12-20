@@ -60,8 +60,6 @@ There are essentially three different approaches to functional annotation: use G
 * :doc:`Ortholog search using Blast and NCBI <annotation/annotation_via_ortholog>`
 * :doc:`Evalauting functional annotations <annotation/functional_evaluation>`
 
-Non-Protein Coding and Other Functional Element Prediction
-----------
 
 Non-Coding RNA
 --------------
@@ -71,14 +69,6 @@ tfam, dfam, rfam
 `Integrative rDNAomics—Importance of the Oldest Repetitive Fraction of the Eukaryote Genome <https://www.mdpi.com/2073-4425/10/5/345>`_
 
 `Long Noncoding RNAs and Repetitive Elements: Junk or Intimate Evolutionary Partners? <https://www.sciencedirect.com/science/article/pii/S0168952519301933>`_
-
-
-
-Organelle Genome
-----------------
-
-Mitochondria and chloroplasts
-
 
 
 Transcription and Chromatin Binding Sites
