@@ -83,6 +83,7 @@ But wait, that's not all. There is a slew of additional non-coding sequence cont
 .. toctree::
 
    genome_annotation
+   beyond_gene_annotation
 
 
 
