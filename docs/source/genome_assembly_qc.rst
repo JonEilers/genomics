@@ -3,12 +3,12 @@ Genome Assembly QC
 
 .. _Genome Assembly QC:
 
-To effectively assess genome assemblies for gene prediction, it is essential to evaluate several key characteristics. The `Earth Biogenome Project <https://www.earthbiogenome.org/report-on-assembly-standards>`_, an ambitious initiative aimed at sequencing, cataloging, and characterizing the genomes of all eukaryotic species, has set forth comprehensive standards for genome assemblies. According to these standards, detailed in their report on assembly standards, genome assemblies should meet the following criteria:
+Genome assembly quality control is arguably the most critical step of any genome sequencing project. If this is skipped or executed poorly, the resulting gene model prediction and genome analyses will contain errors and scientists will make erroneous conclusions. The `Earth Biogenome Project <https://www.earthbiogenome.org/report-on-assembly-standards>`_, an ambitious initiative aimed at sequencing, cataloging, and characterizing the genomes of all eukaryotic species, has set forth comprehensive quality control standards for genome assemblies. According to these standards, detailed in their report on assembly standards, genome assemblies should meet the following criteria:
 
 * A false duplication rate of less than 5%.
-* A kmer completeness of over 90%.
+* A K-mer completeness of over 90%.
 * Over 90% of the sequence assigned to candidate chromosomal sequences.
-* More than 90% of single-copy conserved genes, such as those identified by BUSCO, should be complete and in a single copy.
+* More than 90% of single-copy conserved genes, such as those identified by BUSCO, should be complete and single copy.
 * Above 90% of transcripts from the same organism should be mappable.
 * The elimination of biological contamination.
 * Clear separation and identification of organelle genomes.
@@ -16,7 +16,9 @@ To effectively assess genome assemblies for gene prediction, it is essential to 
 
 These standards are underscored by the 2021 publication "`Towards complete and error-free genome assemblies of all vertebrate species <https://www.nature.com/articles/s41586-021-03451-0>`_" which delves into the complexities and challenges encountered in sequencing and assembling six vertebrate genomes to the exacting standards set by the international Genome 10K (G10K) consortium.
 
-Further insights into the intricate processes and methodologies required to achieve high-quality genome assemblies, particularly telomere-to-telomere human genome assembly, are explored in the 2022 paper "`Chasing perfection: validation and polishing strategies for telomere-to-telomere genome assemblies <https://www.nature.com/articles/s41592-022-01440-3>`_" This paper discusses the pioneering effort to achieve a complete human genome assembly, which revealed an additional 151 megabases of sequence information. This newly included sequence data, predominantly from pericentromeric and subtelomeric regions, recent segmental duplications, ampliconic gene arrays, and ribosomal DNA (rDNA) arrays, sheds light on areas of the human genome previously challenging to assemble due to their repetitive content. These regions are not only complex but also harbor sequences and genes crucial to genomic function. For a more detailed exploration of this topic, the paper "`The complete sequence of a human genome <https://www.science.org/doi/full/10.1126/science.abj6987>`_" offers in-depth information.
+Further insights into the intricate processes and methodologies required to achieve high-quality genome assemblies, such as the telomere-to-telomere human genome assembly, are explored in the 2022 paper "`Chasing perfection: validation and polishing strategies for telomere-to-telomere genome assemblies <https://www.nature.com/articles/s41592-022-01440-3>`_" This paper discusses the pioneering effort to achieve a complete human genome assembly, which revealed an additional 151 megabases of sequence information. This newly included sequence data, predominantly from pericentromeric and subtelomeric regions, recent segmental duplications, ampliconic gene arrays, and ribosomal DNA (rDNA) arrays, sheds light on areas of the human genome previously challenging to assemble due to their repetitive content. These regions are not only complex but also harbor sequences and genes crucial to genomic function. For a more detailed exploration of this topic, the paper "`The complete sequence of a human genome <https://www.science.org/doi/full/10.1126/science.abj6987>`_" offers in-depth information.
+
+In summary, the pursuit of a high-quality genome assembly requires significant due diligence, often making it the most time-intensive and resource-demanding aspect of any genome sequencing project. However, this meticulous approach is essential; neglecting it would fall into the realm of poor scientific practice. Regrettably, there is a non-trivial segment within the biological research community that prioritizes rapid publication and the associated prestige over rigorous methodology. This haste can lead to the release of substandard genome assemblies, undermining the integrity and value of the research. Such practices highlight the importance of adhering to established standards and methodologies to ensure the reliability and utility of genomic data.
 
 Summary Statistics
 -------------------
