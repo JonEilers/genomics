@@ -33,7 +33,7 @@ An essential aspect to consider in genome assembly evaluation is the distinction
 
 In summary statistics of genome assemblies, both contig N50 and scaffold N50 values are usually presented. However, the contig N50 metric is particularly crucial, as it provides a more direct measure of the assembly's quality in terms of gene model predictions. Higher contig N50 indicates a larger number of longer contigs and, consequently, a higher likelihood of capturing complete genes. In contrast, scaffold N50, while useful for understanding the broader structure of the genome, may overestimate the assembly quality due to the inclusion of gap regions. Therefore, contig N50 serves as a more reliable indicator of the potential accuracy and completeness of gene predictions in a given genome assembly.
 
-* :doc:`Summary statistics via a variaty of tools <assembly_qc/summary-stats>`
+* :doc:`Summary statistics via a variety of tools <assembly_qc/summary-stats>`
 
 Assembly QC with BUSCOs
 ------------------------
