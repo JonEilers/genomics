@@ -33,7 +33,7 @@ An essential aspect to consider in genome assembly evaluation is the distinction
 
 In summary statistics of genome assemblies, both contig N50 and scaffold N50 values are usually presented. However, the contig N50 metric is particularly crucial, as it provides a more direct measure of the assembly's quality in terms of gene model predictions. Higher contig N50 indicates a larger number of longer contigs and, consequently, a higher likelihood of capturing complete genes. In contrast, scaffold N50, while useful for understanding the broader structure of the genome, may overestimate the assembly quality due to the inclusion of gap regions. Therefore, contig N50 serves as a more reliable indicator of the potential accuracy and completeness of gene predictions in a given genome assembly.
 
-* :doc:`Summary statistics via a variety of tools <assembly_qc/summary-stats>`
+* :doc:`Summary Statistics Via a Variety of Tools <assembly_qc/summary-stats>`
 
 Checking for Complete Conserved Genes
 ------------------------
@@ -42,13 +42,19 @@ Checking `BUSCO <https://busco.ezlab.org/>`_ (Benchmarking Universal Single-Copy
 
 However, it's important to recognize that BUSCO scores are not representative of a 'best case scenario' but should be considered as a targeted, yet somewhat random, sample of the assemblies gene content. This means while BUSCO scores provide valuable insights into the assembly quality, they do not necessarily account for all possible structural gene variations or complexities. Therefore, while BUSCO scores are a valuable tool in genomic analysis, they should be interpreted within the broader context of the genome's overall characteristics and other quality metrics. However, if BUSCO scores are low, it is highly indicative of problems with the genome assembly. 
 
-* :doc:`Assembly quality assessment using BUSCO analysis <assembly_qc/assembly_busco>`
+* :doc:`Assembly Quality Assessment using BUSCO Analysis <assembly_qc/assembly_busco>`
 
 Assembly Contamination and Quality
 ----------------------------------
-In addition to looking at summary statistics and checking BUSCOs, it is also wise to check for contamination. During the sequencing process, DNA from other organisms may be in the sample and it's important to know if that has found its way into the genome assembly. A common method for checking this is to download a uniprot or refseq protein database and blast it against your assembly then check to see what organisms had the highest hit. If those organisms are closely related to the organism of interest, then it is safe to say that's probably solid, but if there are a lot of hits for distantly related organisms, then it might be a good idea to consider preprocessing and filtering the raw data before assembling. `Blobtoolkit <https://www.g3journal.org/content/10/4/1361>`_ produces two different types of graphs, the blobplot and the Cumulative assembly span plot, for visualizing possible contamination. Additionally, `KAT <https://academic.oup.com/bioinformatics/article/33/4/574/2664339?login=true>`_ can be used to check for k-mer contamination in an assembly. 
+In addition to examining summary statistics and assessing BUSCO scores, it is crucial to screen for potential contamination in genome assemblies. Contamination can occur during the sequencing process, where DNA from other organisms inadvertently gets included in the sample (e.g., epibionts on gill tissue of king crabs or endophytes that live within plant tissue). Identifying and addressing such contamination is vital for the integrity of the genome assembly.
 
-.. note:: :doc:`Assembly contamination and quality via Blobtoolkit <assembly_qc/contamination>`
+One common approach to detecting contamination involves using protein databases like UniProt or RefSeq. By conducting a BLAST (Basic Local Alignment Search Tool) analysis against the assembly with these databases, you can identify the organisms that correspond to the highest number of sequence matches. If the top hits are from organisms closely related to your species of interest, the assembly is likely accurate. Because the organism that is having its genome sequenced likely does not have sequences in UniProt or RefSeq, it is expected that closely related species will be present. However, if there are significant matches to distantly related organisms, this could indicate contamination. In such cases, it might be necessary to revisit the preprocessing and filtering stages of the raw sequencing data before assembly or simply remove the contigs containing the potential contamination.
+
+Additionally, k-mer analysis can be used to filter out potential contamination in the raw sequence data and genome assembly. A k-mer is a sequence string of 'k' consecutive nucleotides. In the context of DNA sequencing, it refers to all the possible subsequences (of length 'k') that can be derived from a DNA sequence. For example, in a given DNA sequence, if 'k' is set to 3 (thus making it a 3-mer), and the sequence is 'ATGCA', the 3-mers would be 'ATG', 'TGC', and 'GCA'. For detecting potential contamination, k-mer analysis looks for k-mers that have unusual GC content. This is especially effective if there are multiple sequence datasets from different tissues, which include whole-genome data using both short and long reads. Comparing these datasets should reveal any unexpected reads which can then be removed prior to assembly or after assembly. 
+
+Recent years have also seen the development of QV
+
+.. note:: :doc:`Assembly Contamination and Quality Analysis <assembly_qc/contamination>`
 
 Assembly Evaluation using K-mers and Long Reads
 -----------------------------------------------
