@@ -55,14 +55,7 @@ Additionally, k-mer analysis can be used to filter out potential contamination i
 Recent years have also seen the development of quality value scores (QV) which vary depending on which tool is used. `Merqury <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02134-9>`_ calculates a QV score which represents a "log-scaled probability of error per a base in the assembly". In the case of `Inspector <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02527-4>`_, QV is "calculated based on the identified structural and small-scale errors scaled by the total base pairs of the assemblies ". While the method for calculating these two different QV scores are different, they do correlate with eachother. 
 
 * :doc:`Assembly Contamination and Quality Analysis <assembly_qc/contamination>`
-* :doc:`Calculating Genome Assembly Quality Value Scores <assembly_qc/qv_score>`
-
-Assembly Evaluation using K-mers and Long Reads
------------------------------------------------
-
-It is important to get a quantifiable picture of the assembly quality. One way to check assembly quality is using K-mers to see how many unique K-mers are found in both the assembly and the raw data then visualize it using a `K-mer spectra graph <https://academic.oup.com/view-large/figure/118668344/btw663f1.tif>`_. A great tool for this is `Merqury <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02134-9>`_. Another tool for assembly evaluation is called `Inspector <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02527-4>`_ which uses long reads to identify, quantify, and correct errors. 
-
-* :doc:`Assembly Quality Assessment using Inspector and Merqury <assembly_qc/genome_quality>`
+* :doc:`Calculating Genome Assembly Quality Value Scores <assembly_qc/genome_quality>`
 
 Polishing and Gap Closing
 -------------------------
@@ -70,14 +63,14 @@ Polishing and Gap Closing
 Once you have an assembly that is as good as it'll get, it might be possible to squeeze a little more out of your data using gap closing and polishing tools. However, just like with read trimming, doing either gap closing or polishing can result in an assembly that was worse than what you started with. I also want to add that overzealous use of gap closing or polishing can result in poor assemblies. This is a huge problem when these assemblies are then uploaded into NCBI and used as references genomes for other projects. Most researchers do not have the skill, knowledge, or time to check that the assembly or genes from assemblies are trustworthy, potentially resulting in a lot of frustration and wasted time and money. So proceed with caution. 
 
 Gap Closing
------------
+~~~~~~~~~~~
 
 Using long read data, it is now possible to close gaps that are produced by genome assembler with a high degree of confidence. This is significantly different from previous tools such as `SSpace <https://academic.oup.com/bioinformatics/article/27/4/578/197626>`_ that relied on paired end short reads to close gaps or extend contigs. There are two problems with this approach, the obvious one is that the reads are too short to accurately span repetitive elements. The second problem is that these tools are haplo-type insensitive, meaning they can't tell if they are actually extending a real contig or just stringing alleles together creating inaccurate duplications. 
 
 * To-do: Gap closing using Dentist, SAMBA and Longstitch
 
 Polishing
----------
+~~~~~~~~~~~
 
 It's also important to remove any insertions, deletions, and adapter contamination that may have crept into the genome assembly. This can be accomplished using either long read or short read data. Short read data has a much higher accuracy, but long read data, while full of errors, can produce a consensus sequence that is highly accurate which can allow it to correct longer mistakes than short read data. 
 
