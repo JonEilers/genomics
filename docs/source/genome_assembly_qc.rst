@@ -65,9 +65,7 @@ Once you have an assembly that is as good as it'll get, it might be possible to 
 Gap Closing
 ~~~~~~~~~~~
 
-Using long read data, it is now possible to close gaps that are produced by genome assembler with a high degree of confidence. This is significantly different from previous tools such as `SSpace <https://academic.oup.com/bioinformatics/article/27/4/578/197626>`_ that relied on paired end short reads to close gaps or extend contigs. There are two problems with this approach, the obvious one is that the reads are too short to accurately span repetitive elements. The second problem is that these tools are haplo-type insensitive, meaning they can't tell if they are actually extending a real contig or just stringing alleles together creating inaccurate duplications. 
-
-* To-do: Gap closing using Dentist, SAMBA and Longstitch
+The most common method for generating scaffolds is through the use of Hi-C to phase and orient contigs into chromosome scale scaffolds. Gaps are created in the assembly composed of Ns which represent the unknown bases and the number of Ns representing the distance between contigs (ideally). `Here <https://academic.oup.com/bib/article/22/5/bbab033/6149347>`_ is a review that goes into detail regarding various scaffolding approaches and the caveats associated with each. These gaps can potentially be filled using gap closing tools. This may require new long read data, and in some cases ultra-long reads sequenced using nanopore sequencing. Doesn't hurt to try using either previously used reads though. 
 
 Polishing
 ~~~~~~~~~~~
