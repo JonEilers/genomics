@@ -70,19 +70,7 @@ The most common method for generating scaffolds is through the use of Hi-C to ph
 Polishing
 ~~~~~~~~~~~
 
-It's also important to remove any insertions, deletions, and adapter contamination that may have crept into the genome assembly. This can be accomplished using either long read or short read data. Short read data has a much higher accuracy, but long read data, while full of errors, can produce a consensus sequence that is highly accurate which can allow it to correct longer mistakes than short read data. 
+Polishing is probably one of the most overlooked and underappreciated steps of genome assembly. As a result, what appear to be high quality genomes and gene models are published that contain numerous errors. Do not skip this step. Also, have a list of gene models to manually check for gene models errors as this will be more revealing than output summary statistics from the polishing tools. Polishing removes insertions, deletions, and adapter contamination that may have crept into the genome assembly. Examples of what this looks like can be found in the paper `Chasing perfection: validation and polishing strategies for telomere-to-telomere genome assemblies <https://www.nature.com/articles/s41592-022-01440-3>`_. Polishing can be accomplished using either long read or short read data. Short read data has a much higher accuracy and as such can correct short sequences. However, long reads can fix longer, structural errors. 
 
 * :doc:`Genome assembly polishing using hapo-g <assembly_qc/polishing>`
-
-Manual Assembly Correction
---------------------------
-
-Recently, researcher who completed the first 100% complete genome assembly uploaded a `pre-print <https://www.biorxiv.org/content/10.1101/2021.07.02.450803v1>`_ to biorxiv detailing their process and advocating for a more manual gap closing process. This is a neat paper and their process will likely feature in many future efforts to create 100% complete telomere to telomere genome assemblies. Although, this process is likely to primarily be used on genome assemblies that are already near completion. Sea cucumber genomes may be waiting awhile before they get this level of treatment. The paper is titled `chasing perfection <https://www.biorxiv.org/content/10.1101/2021.07.02.450803v1>`_. 
-
-.. note:: `Significantly improving the quality of genome assemblies through curation <https://academic.oup.com/gigascience/article/10/1/giaa153/6072294>`_
-
-.. note:: Hmmm, maybe play with `AGB <https://github.com/almiheenko/AGB>`_ for visualizing long read assembly?
-
-.. note:: Note to self: Consider future genome analysis and reassembly for `Australostichopus mollis <https://www.ncbi.nlm.nih.gov/bioproject/PRJEB10682/>`, `Apostichopus leukothele <https://www.ncbi.nlm.nih.gov/sra/SRX8086344`accn <>`, and `Actinopyga echinites <https://www.ncbi.nlm.nih.gov/assembly/GCA_010015985.1#/st>` genomes.
-
 
