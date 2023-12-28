@@ -14,6 +14,12 @@ Genome assembly quality control is arguably the most critical step of any genome
 * Clear separation and identification of organelle genomes.
 * Phasing, which involves the explicit identification of a primary assembly and an alternate haplotype assembly.
 
+.. figure:: assembly_qc/images/graphviz/genome_quality.png
+   :align: left
+   :width: 80%
+   :figwidth: 40%
+
+
 These standards are underscored by the 2021 publication "`Towards complete and error-free genome assemblies of all vertebrate species <https://www.nature.com/articles/s41586-021-03451-0>`_" which delves into the complexities and challenges encountered in sequencing and assembling six vertebrate genomes to the exacting standards set by the international Genome 10K (G10K) consortium.
 
 Further insights into the intricate processes and methodologies required to achieve high-quality genome assemblies, such as the telomere-to-telomere human genome assembly, are explored in the 2022 paper "`Chasing perfection: validation and polishing strategies for telomere-to-telomere genome assemblies <https://www.nature.com/articles/s41592-022-01440-3>`_" This paper discusses the pioneering effort to achieve a complete human genome assembly, which revealed an additional 151 megabases of sequence information. This newly included sequence data, predominantly from pericentromeric and subtelomeric regions, recent segmental duplications, ampliconic gene arrays, and ribosomal DNA (rDNA) arrays, sheds light on areas of the human genome previously challenging to assemble due to their repetitive content. These regions are not only complex but also harbor sequences and genes crucial to genomic function. For a more detailed exploration of this topic, the paper "`The complete sequence of a human genome <https://www.science.org/doi/full/10.1126/science.abj6987>`_" offers in-depth information.
@@ -72,5 +78,5 @@ Polishing
 
 Polishing is probably one of the most overlooked and underappreciated steps of genome assembly. As a result, what appear to be high quality genomes and gene models are published that contain numerous errors. Do not skip this step. Also, have a list of gene models to manually check for gene models errors as this will be more revealing than output summary statistics from the polishing tools. Polishing removes insertions, deletions, and adapter contamination that may have crept into the genome assembly. Examples of what this looks like can be found in the paper `Chasing perfection: validation and polishing strategies for telomere-to-telomere genome assemblies <https://www.nature.com/articles/s41592-022-01440-3>`_. Polishing can be accomplished using either long read or short read data. Short read data has a much higher accuracy and as such can correct short sequences. However, long reads can fix longer, structural errors. Assembly polishing is typically an iterative process requiring anywhere from three to six rounds of polishing. However, this is a subjective number and the correct number of polishing rounds should be based on manual inspection of genes and sequence alignments. It should also be noted that under or over polishing can significantly impact the assembly quality. Under polishing, intuitively, fails to correct as many errors as possible. On the other hand, some polishing tools such as Racon are notorious for over polishing, meaning the more polishing rounds are done, the more likely the tool will start introducing errors into the assembly. 
 
-* :doc:`Genome assembly polishing using hapo-g <assembly_qc/polishing>`
+* :doc:`Genome assembly polishing <assembly_qc/polishing>`
 

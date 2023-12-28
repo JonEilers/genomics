@@ -1,0 +1,21 @@
+# http://www.graphviz.org/content/cluster
+
+digraph G {
+  graph [fontname = "Handlee", label="Genome Assembly Quality Assessment", labelloc=t, fontsize=20, rankdir=LR];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+
+
+
+ "false duplication < 5"
+"K-mer completeness > 90%"
+ ">90% sequences assigned to chromosomes"
+ ">90% Complete single copy BUSCOs"
+">90% of transcripts are mappable"
+ "No biological contamination"
+"Separate Organelle genomes"
+ "Phased chromosome haplotypes"
+
+}
