@@ -7,8 +7,7 @@ Genome assembly quality control is arguably the most critical step of any genome
 
 .. figure:: assembly_qc/images/graphviz/genome_quality.png
    :align: left
-   :width: 80%
-   :figwidth: 40%
+   :figwidth: 50%
 
 These standards are underscored by the 2021 publication "`Towards complete and error-free genome assemblies of all vertebrate species <https://www.nature.com/articles/s41586-021-03451-0>`_" which delves into the complexities and challenges encountered in sequencing and assembling six vertebrate genomes to the exacting standards set by the international Genome 10K (G10K) consortium.
 

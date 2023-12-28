@@ -9,7 +9,7 @@ digraph G {
 
 
 
- "false duplication < 5"
+ "false duplication < 5%"
 "K-mer completeness > 90%"
  ">90% sequences assigned to chromosomes"
  ">90% Complete single copy BUSCOs"
