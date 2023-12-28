@@ -5,20 +5,10 @@ Genome Assembly QC
 
 Genome assembly quality control is arguably the most critical step of any genome sequencing project. If this is skipped or executed poorly, the resulting gene model prediction and genome analyses will contain errors and scientists will make erroneous conclusions. The `Earth Biogenome Project <https://www.earthbiogenome.org/report-on-assembly-standards>`_, an ambitious initiative aimed at sequencing, cataloging, and characterizing the genomes of all eukaryotic species, has set forth comprehensive quality control standards for genome assemblies. According to these standards, detailed in their report on assembly standards, genome assemblies should meet the following criteria:
 
-* A false duplication rate of less than 5%.
-* A K-mer completeness of over 90%.
-* Over 90% of the sequence assigned to candidate chromosomal sequences.
-* More than 90% of single-copy conserved genes, such as those identified by BUSCO, should be complete and single copy.
-* Above 90% of transcripts from the same organism should be mappable.
-* The elimination of biological contamination.
-* Clear separation and identification of organelle genomes.
-* Phasing, which involves the explicit identification of a primary assembly and an alternate haplotype assembly.
-
 .. figure:: assembly_qc/images/graphviz/genome_quality.png
    :align: left
    :width: 80%
    :figwidth: 40%
-
 
 These standards are underscored by the 2021 publication "`Towards complete and error-free genome assemblies of all vertebrate species <https://www.nature.com/articles/s41586-021-03451-0>`_" which delves into the complexities and challenges encountered in sequencing and assembling six vertebrate genomes to the exacting standards set by the international Genome 10K (G10K) consortium.
 
