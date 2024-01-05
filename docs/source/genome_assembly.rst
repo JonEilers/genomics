@@ -7,9 +7,9 @@ Genome Assembly is `hard <https://journals.plos.org/plosbiology/article?id=10.13
 
 Genome assembly approaches largely depend on the type and quality of data you have available to you. Sanger sequencing used to be the golden standard. Then Illumina shotgun sequencing took over for awhile. Now we have long read sequencing using either PacBio or Oxford Nanopore Technologies platforms. Additional wet lab techniques such as `Hi-C <https://en.wikipedia.org/wiki/Chromosome_conformation_capture#Hi-C_(all-vs-all)>`_ or `optical mapping <https://en.wikipedia.org/wiki/Optical_mapping>`_ can further bring the assembly pieces together into chromosome length scaffolds. Any combination of the above can be found in most current genome assembly papers. However, if Illumina is all you have and genomes of closely related species are available, then reference assisted genome assembly is a possibility, but with caveats. 
 
-.. note:: `Mind the Gap <https://www.sciencedirect.com/science/article/abs/pii/S1087184515300220>`_ reasons to produce gapless genome assemblies
-.. note:: `Errors in long-read assemblies can critically affect protein prediction <https://www.nature.com/articles/s41587-018-0004-z>`_ for why it is critical to check assembly quality and fix errors
-.. note:: `A comprehensive review of scaffolding methods in genome assembly <https://academic.oup.com/bib/article-abstract/22/5/bbab033/6149347?redirectedFrom=fulltext>`_ on ways to improve assemblies scaffolding
+* `Mind the Gap <https://www.sciencedirect.com/science/article/abs/pii/S1087184515300220>`_ reasons to produce gapless genome assemblies
+* `Errors in long-read assemblies can critically affect protein prediction <https://www.nature.com/articles/s41587-018-0004-z>`_ for why it is critical to check assembly quality and fix errors
+* `A comprehensive review of scaffolding methods in genome assembly <https://academic.oup.com/bib/article-abstract/22/5/bbab033/6149347?redirectedFrom=fulltext>`_ on ways to improve assemblies scaffolding
 
 Short Read
 ----------
@@ -18,12 +18,12 @@ Illumina sequencing is cheap, relatively speaking. In my case, a mere $1200 got 
 
 It has been close to two decades since Illumina short read sequencing became accessible and as a result there are innumerable short read assemblers. In recent years though, significant progress has been made in assembly algorithms and the result has been some blazing fast and accurate assembly tools. See below for two popular short read assemblers.
 
-.. note:: :doc:`Short read assembly using ABySS and SPAdes <assembly/short_read_assembly>`
+* :doc:`Short read assembly using ABySS and SPAdes <assembly/short_read_assembly>`
 
 In my case, I am working with organisms that are highly heterozygous. What this means is there is enough variation between the two chromosomes in each chromosome pair to cause problems for a genome assembler that doesn't take this into account. Platanus-Allee was specifically designed to deal with that. The author also created another tool for genomes that have less variation (such as humans) called `Platanus <http://platanus.bio.titech.ac.jp/platanus-assembler>`_. On the Platanus-Allee webpage they state that for low heterozygous species genomes with heterozygousity < 1.0%, Platanus assembler would mark better performance than Platanus-allee. Another genome assembler for heterozygous genomes is `MaSuRCA <https://academic.oup.com/bioinformatics/article/29/21/2669/195975?login=true>`_. Both Platanus-allee and MaSuRCA are hybrid genome assemblers and I go into more detail in the Hybrid genome assembly section. See below for two very brief examples of using these two genome assemblers with just short read data. 
 
 
-.. note:: :doc:`Short-read assembly using Platanus-Allee and MaSURCA <assembly/heterozygous_short_read_assembly>`
+* :doc:`Short-read Assembly <assembly/heterozygous_short_read_assembly>`
 
 Long Read
 ---------
@@ -36,21 +36,18 @@ Currently, there are long read sequencing technologies that are duking it out: P
 
 Now on to long read sequence genome assembly. Because the reads are longer, but contain more errors, genome assemblers use slightly different approaches to handling the "noisy" reads. But the results are usually better than anything achievable using short read data and most genome assembly pipelines include a few rounds of "polishing" post genome assembly. I go into more detail on this further down this page. See the link below for re-assembly of a sea cucumber genome using three different long read assemblers. 
 
-.. note:: :doc:`Long read assembly of Chiridota heheva using Raven, Flye, and Shasta assemblers <assembly/long_read_assembly>`
+* :doc:`Assembling Contigs using Long Read Data <assembly/long_read_assembly>`
 
-Hybrid
-------
-
-Hybrid genome assembly is the predominate approach these days. The majority of recent genome publications use a mix of long read, short read, and hi-c. See below for some examples. 
-
-
-.. note:: :doc:`Hybrid genome assembly of Apostichopus japonicus using Platanus-allee and MaSURCA <assembly/hybrid_assembly>`
-.. warning:: :doc:`Using Hi-C data to achieve chromosome scale scaffolds using salsa, yahs, 3d-dna and hirise for the Stichopus chloronotus genome <assembly/hi-c_hybrid_assembly>`
-
-Phased Genome assembly
+Scaffolding using Hi-C and Optical Genome mapping
 ----------------------
 
-.. note:: :doc:`Phasing Genome Assemblies <assembly/phased_assembly>`
+* :doc:`Scaffolding Long Read Contigs using Hi-C and Optical Genome Mapping <assembly/long_read_assembly>`
+
+
+Assembly Phasing
+----------------------
+
+* :doc:`Phasing Genome Assemblies <assembly/phased_assembly>`
 
 
 Organelle Genome
