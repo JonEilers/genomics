@@ -40,6 +40,10 @@ The caveat of current long read sequencing technologies is the error rate per a 
 Scaffolding using Hi-C and Optical Genome mapping
 ----------------------
 
+Scaffolds consist of contigs which have been assigned a position and orientation relative to other contigs and "glued" together using "N"s. These are called "gaps". If the distance between the contigs is known, then the gaps will be filled to capture that length. However, in some cases the size is unknown and set gap length is inserted.
+
+Additional information is often needed in order to generate chromosome length scaffolds. While there are a number of `different methods <https://academic.oup.com/bib/article/22/5/bbab033/6149347>`_, the most commonly used approach is Hi-C sequencing. This approach uses statistical methods applied to chromatin contact information in the Hi-C data to predict location and orientation of contigs. However, relying solely on this approach, espeically for large complicated genome, may increase the `likelihood of scaffolding errors <https://www.mdpi.com/2223-7747/12/2/320>`_. Physical approaches such as Optical Genome Mapping (OGM) offers a way to further `refine and assign scaffolds to chromosomes <https://jmg.bmj.com/content/60/3/274.abstract>`_. 
+
 * :doc:`Scaffolding Long Read Contigs using Hi-C and Optical Genome Mapping <assembly/long_read_assembly>`
 
 
