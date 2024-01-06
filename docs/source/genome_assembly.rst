@@ -50,6 +50,8 @@ Additional information is often needed in order to generate chromosome length sc
 Assembly Phasing
 ----------------------
 
+While genome phasing has been around for sometime as a concept, it was largely relegated to high profile projects. With the advent of Hi-C and long read sequencing, genome phasing has become `standard practice <https://www.sciencedirect.com/science/article/pii/S2001037019303836>`_ for high-quality genomes. However, standards for publication and file type along with tools for analyzing phasing data is still relatively immature. However, having this data can be particularly useful when looking at agricultural crops that are not true-to-type. Meaning the phenotype we consume is specific to one individual that has been cloned. Understanding how the alleles contribute to the phenotype can be important to `breeding and crop refinement <https://www.nature.com/articles/s41588-020-0699-x>`_. 
+
 * :doc:`Phasing Genome Assemblies <assembly/phased_assembly>`
 
 
