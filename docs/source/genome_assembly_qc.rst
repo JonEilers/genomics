@@ -52,18 +52,16 @@ Recent years have also seen the development of quality value scores (QV) which v
 * :doc:`Assembly Contamination and Quality Analysis <assembly_qc/contamination>`
 * :doc:`Calculating Genome Assembly Quality Value Scores <assembly_qc/genome_quality>`
 
-Polishing and Gap Closing
--------------------------
 
 Once you have an assembly that is as good as it'll get, it might be possible to squeeze a little more out of your data using gap closing and polishing tools. However, just like with read trimming, doing either gap closing or polishing can result in an assembly that was worse than what you started with. I also want to add that overzealous use of gap closing or polishing can result in poor assemblies. This is a huge problem when these assemblies are then uploaded into NCBI and used as references genomes for other projects. Most researchers do not have the skill, knowledge, or time to check that the assembly or genes from assemblies are trustworthy, potentially resulting in a lot of frustration and wasted time and money. So proceed with caution. 
 
 Gap Closing
-~~~~~~~~~~~
+__________
 
 The most common method for generating scaffolds is through the use of Hi-C to phase and orient contigs into chromosome scale scaffolds. Gaps are created in the assembly composed of Ns which represent the unknown bases and the number of Ns representing the distance between contigs (ideally). `Here <https://academic.oup.com/bib/article/22/5/bbab033/6149347>`_ is a review that goes into detail regarding various scaffolding approaches and the caveats associated with each. These gaps can potentially be filled using gap closing tools. This may require new long read data, and in some cases ultra-long reads sequenced using nanopore sequencing. Doesn't hurt to try using either previously used reads though. 
 
 Polishing
-~~~~~~~~~~~
+____________
 
 Polishing is probably one of the most overlooked and underappreciated steps of genome assembly. As a result, what appear to be high quality genomes and gene models are published that contain numerous errors. Do not skip this step. Also, have a list of gene models to manually check for gene models errors as this will be more revealing than output summary statistics from the polishing tools. Polishing removes insertions, deletions, and adapter contamination that may have crept into the genome assembly. Examples of what this looks like can be found in the paper `Chasing perfection: validation and polishing strategies for telomere-to-telomere genome assemblies <https://www.nature.com/articles/s41592-022-01440-3>`_. Polishing can be accomplished using either long read or short read data. Short read data has a much higher accuracy and as such can correct short sequences. However, long reads can fix longer, structural errors. Assembly polishing is typically an iterative process requiring anywhere from three to six rounds of polishing. However, this is a subjective number and the correct number of polishing rounds should be based on manual inspection of genes and sequence alignments. It should also be noted that under or over polishing can significantly impact the assembly quality. Under polishing, intuitively, fails to correct as many errors as possible. On the other hand, some polishing tools such as Racon are notorious for over polishing, meaning the more polishing rounds are done, the more likely the tool will start introducing errors into the assembly. 
 
