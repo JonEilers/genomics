@@ -10,7 +10,8 @@ In the upcoming years the number of species with genome assemblies is going to e
 
 My goal is to distill the basics into one website that is understandable and accessible to encourage scientists and the curious that genome sequencing projects are achievable without needing wads of cash and a team of scientists. It is my hope that someday sequencing technology and assembly are so accessible that an intrepid explorer or young person stumbling across an interesting bug or novel plant phenotype could take it home and submit it for genome sequencing without needing to sell an arm and a leg, or brave the academic ivory tower. 
 
-:warning:` Please Note, all the tutorials are currently in the process of being transferred from a former website and updated. Once a section is finished, the content will be added.`
+.. warning::
+   **Please Note:** All tutorials are currently in the process of being transferred from a former website and updated. Content will be added once each section is completed.
 
 On the surface, genome sequencing projects are fairly straightforward. It begins with checking the quality of your raw sequence data, assembling the raw reads into contiguous sequences, and then predicting where genes are and what those genes do. However, nothing is ever that simple. Genome sequencing requires several different data types, each step has numerous sub-steps and quality control steps, and the final product will need to be manually inspected to ensure that the assembly, gene models, and annotations are correct. 
 
