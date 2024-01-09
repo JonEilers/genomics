@@ -28,7 +28,7 @@ An essential aspect to consider in genome assembly evaluation is the distinction
 
 In summary statistics of genome assemblies, both contig N50 and scaffold N50 values are usually presented. However, the contig N50 metric is particularly crucial, as it provides a more direct measure of the assembly's quality in terms of gene model predictions. Higher contig N50 indicates a larger number of longer contigs and, consequently, a higher likelihood of capturing complete genes. In contrast, scaffold N50, while useful for understanding the broader structure of the genome, may overestimate the assembly quality due to the inclusion of gap regions. Therefore, contig N50 serves as a more reliable indicator of the potential accuracy and completeness of gene predictions in a given genome assembly.
 
-* :doc:`Summary Statistics Via a Variety of Tools <assembly_qc/summary-stats>`
+* :doc:`Summary Statistics Via a Variety of Tools <>`
 
 Checking for Complete Conserved Genes
 ------------------------
@@ -37,7 +37,7 @@ Checking `BUSCO <https://busco.ezlab.org/>`_ (Benchmarking Universal Single-Copy
 
 However, it's important to recognize that BUSCO scores are not representative of a 'best case scenario' but should be considered as a targeted, yet somewhat random, sample of the assemblies gene content. This means while BUSCO scores provide valuable insights into the assembly quality, they do not necessarily account for all possible structural gene variations or complexities. Therefore, while BUSCO scores are a valuable tool in genomic analysis, they should be interpreted within the broader context of the genome's overall characteristics and other quality metrics. However, if BUSCO scores are low, it is `highly indicative of problems with the genome assembly <https://onlinelibrary.wiley.com/doi/abs/10.1111/1755-0998.13364>`_. 
 
-* :doc:`Assembly Quality Assessment using BUSCO Analysis <assembly_qc/assembly_busco>`
+* :doc:`Assembly Quality Assessment using BUSCO Analysis <>`
 
 Assembly Contamination and Quality
 ----------------------------------
@@ -49,8 +49,8 @@ Additionally, k-mer analysis can be used to filter out potential contamination i
 
 Recent years have also seen the development of quality value scores (QV) which vary depending on which tool is used. `Merqury <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02134-9>`_ calculates a QV score which represents a "log-scaled probability of error per a base in the assembly". In the case of `Inspector <https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02527-4>`_, QV is "calculated based on the identified structural and small-scale errors scaled by the total base pairs of the assemblies ". While the method for calculating these two different QV scores are different, they do correlate with each other. 
 
-* :doc:`Assembly Contamination and Quality Analysis <assembly_qc/contamination>`
-* :doc:`Calculating Genome Assembly Quality Value Scores <assembly_qc/genome_quality>`
+* :doc:`Assembly Contamination and Quality Analysis <>`
+* :doc:`Calculating Genome Assembly Quality Value Scores <>`
 
 
 Once you have an assembly that is as good as it'll get, it might be possible to squeeze a little more out of your data using gap closing and polishing tools. However, just like with read trimming, doing either gap closing or polishing can result in an assembly that was worse than what you started with. I also want to add that overzealous use of gap closing or polishing can result in poor assemblies. This is a huge problem when these assemblies are then uploaded into NCBI and used as references genomes for other projects. Most researchers do not have the skill, knowledge, or time to check that the assembly or genes from assemblies are trustworthy, potentially resulting in a lot of frustration and wasted time and money. So proceed with caution. 
@@ -63,5 +63,5 @@ Polishing
 ----------------------------------
 Polishing is probably one of the most overlooked and underappreciated steps of genome assembly. As a result, what appear to be high quality genomes and gene models are published that contain numerous errors. Do not skip this step. Also, have a list of gene models to manually check for gene models errors as this will be more revealing than output summary statistics from the polishing tools. Polishing removes insertions, deletions, and adapter contamination that may have crept into the genome assembly. Examples of what this looks like can be found in the paper `Chasing perfection: validation and polishing strategies for telomere-to-telomere genome assemblies <https://www.nature.com/articles/s41592-022-01440-3>`_. Polishing can be accomplished using either long read or short read data. Short read data has a much higher accuracy and as such can correct short sequences. However, long reads can fix longer, structural errors. Assembly polishing is typically an iterative process requiring anywhere from three to six rounds of polishing. However, this is a subjective number and the correct number of polishing rounds should be based on manual inspection of genes and sequence alignments. It should also be noted that under or over polishing can significantly impact the assembly quality. Under polishing, intuitively, fails to correct as many errors as possible. On the other hand, some polishing tools such as Racon are notorious for over polishing, meaning the more polishing rounds are done, the more likely the tool will start introducing errors into the assembly. 
 
-* :doc:`Genome assembly polishing <assembly_qc/polishing>`
+* :doc:`Genome assembly polishing <>`
 

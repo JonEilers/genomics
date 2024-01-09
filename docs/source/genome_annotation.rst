@@ -24,9 +24,9 @@ In the context of gene prediction and annotation, TEs and REs present both chall
 
 The evolutionary significance of TEs and REs is now increasingly acknowledged. These elements are instrumental in driving genomic and evolutionary processes, contributing to structural genomic variation critical for understanding genome regulation and evolution. They are involved in creating new genes, regulating existing ones, and contributing to genetic innovation and adaptation. This evolving perspective underscores the necessity of including the annotation and study of TEs and REs as a vital component of genomic research, on par with the study of protein-coding regions. 
 
-* :doc:`An Introduction to Repetitive Elements and Transposable Elements </annotation/repetitive_elements>`
-* :doc:`Using TeTools to Identify and Mask Repetitive Elements and Transposons </annotation/tetools>`
-* :doc:`Manual Annotation and Curation of Transposable Elements </annotation/manual_te_annotation>`
+* :doc:`An Introduction to Repetitive Elements and Transposable Elements <>`
+* :doc:`Using TeTools to Identify and Mask Repetitive Elements and Transposons <>`
+* :doc:`Manual Annotation and Curation of Transposable Elements <>`
 
 Expression Data Mapping and Protein Database Alignment
 ----------
@@ -37,8 +37,8 @@ In addition to RNA-Seq data, leveraging protein databases is also necessary. The
 
 Moreover, these protein databases often include manually curated gene models. This manual curation involves thorough verification and correction of gene structures based on available evidence, enhancing the accuracy of gene predictions. By integrating RNA-Seq data with information from protein databases, researchers can achieve a more complete and precise understanding of the genomic landscape, even in areas where gene expression data is limited or absent.
 
-* :doc:`Mapping Gene Expression Data to the Genome Assembly </annotation/rna-seq_mapping>`
-* :doc:`Aligning Protein Databases to the Genome Assembly </annotation/protein_database_alignment>`
+* :doc:`Mapping Gene Expression Data to the Genome Assembly <>`
+* :doc:`Aligning Protein Databases to the Genome Assembly <>`
 
 Gene Model Prediction
 ----------
@@ -47,10 +47,10 @@ Gene prediction, the process of identifying regions of a genome that encode gene
 
 Despite these challenges, automatic methods have become the mainstream approach for initial gene prediction due to the vast size of most genomes and the enormous number of genes they contain. These computational tools provide a foundation for gene annotation but often fall short of the accuracy achieved by manual curation. Manual curation, considered the gold standard, involves a thorough examination of gene expression and protein alignment data to assess and refine gene models. This process is time-consuming and labor-intensive, requiring expert knowledge and a detailed analysis of genomic data. As a result, few projects undertake comprehensive manual curation. However, in recent years, there has been a significant push to manually curate the complete gene sets of specific organisms and particular gene subsets, such as olfactory genes in mice and humans.
 
-* :doc:`Gene Prediction using Braker <annotation/braker_gene_prediction>`
-* :doc:`Gene Prediction using Maker and Augustus <annotation/maker_gene_prediction>`
-* :doc:`Combining Evidence using EvidenceModler or Tserba <annotation/combining_evidence>`
-* :doc:`Visualizing and Editing Gene Models <annotation/manual_curation>`
+* :doc:`Gene Prediction using Braker <>`
+* :doc:`Gene Prediction using Maker and Augustus <>`
+* :doc:`Combining Evidence using EvidenceModler or Tserba <>`
+* :doc:`Visualizing and Editing Gene Models <>`
 
 Functional Annotation and Analysis
 ----------
@@ -65,10 +65,10 @@ In practice, a hierarchical approach is often employed in functional annotation.
 
 The field of functional annotation, while rich in tools and methods, lacks a unified standard, leading to a variety of approaches with varying levels of accuracy and reliability. Researchers must judiciously choose tools and methods, balancing the need for comprehensive annotation with the risk of error. This careful and considered approach to functional annotation is vital for the accurate interpretation of genomic data, ultimately advancing our understanding of biological systems and their implications in health and disease. The continuous development and refinement of annotation tools, coupled with rigorous validation practices, are essential to ensure the reliability and utility of genomic annotations in scientific research.
 
-* :doc:`Functional Annotation using Gene Ontology <annotation/gene_ontology>`
-* :doc:`Protein Domain Annotation using InterProScan and EggNOG-mapper <annotation/protein_domain_annotation>`
-* :doc:`Ortholog search using Blast and NCBI <annotation/annotation_via_ortholog>`
-* :doc:`Evalauting functional annotations <annotation/functional_evaluation>`
+* :doc:`Functional Annotation using Gene Ontology <>`
+* :doc:`Protein Domain Annotation using InterProScan and EggNOG-mapper <>`
+* :doc:`Ortholog search using Blast and NCBI <>`
+* :doc:`Evalauting functional annotations <>`
 
 
 Non-Coding RNA
